@@ -1,0 +1,707 @@
+/* ==========================================================
+   SCHEDULE PAGE
+========================================================== */
+
+.schedule-page{
+    display:flex;
+    width:100%;
+    min-height:100vh;
+    background:#F6F8FC;
+    overflow:hidden;
+    font-family:"Inter",sans-serif;
+}
+
+.schedule-main{
+    flex:1;
+    padding:32px;
+    overflow:auto;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+}
+
+.schedule-main::-webkit-scrollbar{
+    display:none;
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.schedule-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:36px;
+}
+
+.header-left{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.header-left h1{
+    font-size:38px;
+    font-weight:700;
+    color:#202442;
+    line-height:1;
+}
+
+.header-right{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:16px;
+}
+
+/* ==========================================================
+   TABS
+========================================================== */
+
+.schedule-tabs{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.schedule-tabs button{
+
+    width:94px;
+    height:44px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#FFFFFF;
+
+    color:#7A7F98;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.05);
+
+}
+
+.schedule-tabs button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.active-tab{
+
+    background:#5B5BF7 !important;
+
+    color:#FFFFFF !important;
+
+}
+
+/* ==========================================================
+   FILTER
+========================================================== */
+
+.filter-btn{
+
+    width:120px;
+
+    height:46px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#FFFFFF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#2F3456;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.05);
+
+}
+
+.filter-btn:hover{
+
+    background:#5B5BF7;
+
+    color:#FFFFFF;
+
+}
+
+/* ==========================================================
+   SEARCH
+========================================================== */
+
+.search-box{
+
+    position:relative;
+
+}
+
+.search-box input{
+
+    width:290px;
+
+    height:46px;
+
+    border:1px solid #ECEEF6;
+
+    border-radius:14px;
+
+    background:#FFFFFF;
+
+    padding-left:18px;
+
+    padding-right:46px;
+
+    outline:none;
+
+    font-size:14px;
+
+    color:#44476A;
+
+    transition:.25s;
+
+}
+
+.search-box input:focus{
+
+    border-color:#5B5BF7;
+
+}
+
+.search-box svg{
+
+    position:absolute;
+
+    top:50%;
+
+    right:18px;
+
+    transform:translateY(-50%);
+
+    font-size:18px;
+
+    color:#B1B5C8;
+
+}
+
+/* ==========================================================
+   BOARD
+========================================================== */
+
+.schedule-board{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,320px);
+
+    gap:26px;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    padding-bottom:12px;
+
+    scrollbar-width:none;
+
+    -ms-overflow-style:none;
+
+}
+
+.schedule-board::-webkit-scrollbar{
+
+    display:none;
+
+}
+/* ==========================================================
+   COLUMN
+========================================================== */
+
+.schedule-column{
+
+    width:320px;
+
+    min-width:320px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.schedule-column-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.schedule-column-header h2{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#2D325A;
+
+}
+
+.schedule-column-header span{
+
+    width:34px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    background:#FFFFFF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#757A93;
+
+    box-shadow:0 6px 16px rgba(0,0,0,.05);
+
+}
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.schedule-card{
+
+    background:#FFFFFF;
+
+    border-radius:24px;
+
+    padding:24px;
+
+    margin-bottom:22px;
+
+    box-shadow:0 10px 28px rgba(17,24,39,.06);
+
+    transition:.3s;
+
+}
+
+.schedule-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 16px 34px rgba(17,24,39,.12);
+
+}
+
+/* ==========================================================
+   CARD HEADER
+========================================================== */
+
+.schedule-card-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:18px;
+
+}
+
+.schedule-card-title{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+}
+
+.schedule-card-title h4{
+
+    font-size:17px;
+
+    font-weight:700;
+
+    color:#22274B;
+
+    line-height:24px;
+
+}
+
+/* ==========================================================
+   CHECK
+========================================================== */
+
+.empty-circle{
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    border:2px solid #D8DCE9;
+
+    flex-shrink:0;
+
+    margin-top:2px;
+
+}
+
+.checked-icon{
+
+    font-size:20px;
+
+    color:#5B5BF7;
+
+}
+
+/* ==========================================================
+   MENU
+========================================================== */
+
+.more-icon{
+
+    font-size:22px;
+
+    color:#B3B7CA;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.more-icon:hover{
+
+    color:#5B5BF7;
+
+}
+
+/* ==========================================================
+   BADGES
+========================================================== */
+
+.schedule-card-badges{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:16px;
+
+}
+
+.badge{
+
+    height:32px;
+
+    padding:0 18px;
+
+    border-radius:999px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.low{
+
+    background:#FF6C78;
+
+    color:#FFFFFF;
+
+}
+
+.medium{
+
+    background:#FFA685;
+
+    color:#FFFFFF;
+
+}
+
+.high{
+
+    background:#2FC6F3;
+
+    color:#FFFFFF;
+
+}
+
+.status-badge{
+
+    height:32px;
+
+    padding:0 18px;
+
+    border-radius:999px;
+
+    background:#FFD96A;
+
+    color:#313658;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+   DESCRIPTION
+========================================================== */
+
+.card-description{
+
+    font-size:14px;
+
+    font-weight:400;
+
+    line-height:24px;
+
+    color:#767B94;
+
+    margin-bottom:18px;
+
+}
+
+/* ==========================================================
+   IMAGE
+========================================================== */
+
+.card-body{
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+    margin-bottom:22px;
+}
+
+.card-image{
+    width:118px;
+    flex-shrink:0;
+}
+
+.card-image img{
+    width:100%;
+    height:104px;
+    object-fit:cover;
+    border-radius:16px;
+    display:block;
+}
+
+.card-description{
+    flex:1;
+    margin-bottom:0;
+    color:#7A7F98;
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.card-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/* ==========================================================
+   AVATAR GROUP
+========================================================== */
+
+.member-group{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.member-group img{
+
+    width:34px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:2px solid #FFFFFF;
+
+    margin-left:-8px;
+
+    background:#FFFFFF;
+
+    transition:.25s;
+
+}
+
+.member-group img:first-child{
+
+    margin-left:0;
+
+}
+
+.member-group img:hover{
+
+    transform:translateY(-3px);
+
+    z-index:10;
+
+}
+
+.member-count{
+
+    width:34px;
+
+    height:34px;
+
+    margin-left:-8px;
+
+    border-radius:50%;
+
+    background:#28C7F5;
+
+    color:#FFFFFF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    border:2px solid #FFFFFF;
+
+}
+
+/* ==========================================================
+   COMMENTS & LIKES
+========================================================== */
+
+.card-stats{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.card-stats span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    color:#7A7F98;
+
+    font-size:13px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.card-stats span:hover{
+
+    color:#5B5BF7;
+
+}
+
+.card-stats svg{
+
+    font-size:15px;
+
+    color:#B6BACB;
+
+}
+
+/* ==========================================================
+   CARD HOVER
+========================================================== */
+
+.schedule-card:hover .more-icon{
+
+    color:#5B5BF7;
+
+}
+
+.schedule-card:hover .schedule-card-title h4{
+
+    color:#5B5BF7;
+
+}
+
+.schedule-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 16px 34px rgba(0,0,0,.08);
+
+}

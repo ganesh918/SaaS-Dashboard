@@ -1,0 +1,903 @@
+/* ======================================================
+                    GOOGLE FONT
+====================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* ======================================================
+                    PAGE
+====================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.task-preview-page{
+
+    display:flex;
+
+    width:100%;
+
+    min-height:100vh;
+
+    background:#F5F6FA;
+
+    font-family:"Inter",sans-serif;
+
+}
+
+.task-preview-main{
+
+    flex:1;
+
+    padding:36px;
+
+    overflow-x:auto;
+
+}
+
+/* ======================================================
+                    TOP HEADER
+====================================================== */
+
+.task-preview-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:36px;
+
+}
+
+/* ======================================================
+                    LEFT
+====================================================== */
+
+.task-preview-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.task-preview-left h1{
+
+    font-size:38px;
+
+    font-weight:700;
+
+    color:#202224;
+
+    line-height:48px;
+
+}
+
+/* ======================================================
+                    TABS
+====================================================== */
+
+.task-tabs{
+
+    margin-top:28px;
+
+    display:flex;
+
+    width:310px;
+
+    height:52px;
+
+    background:#FFFFFF;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:
+
+    0 6px 18px rgba(0,0,0,.05);
+
+}
+
+.task-tabs button{
+
+    flex:1;
+
+    border:none;
+
+    background:white;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#6B7280;
+
+    transition:.3s;
+
+}
+
+.task-tabs button.active{
+
+    background:#5B57F6;
+
+    color:white;
+
+}
+
+/* ======================================================
+                    RIGHT
+====================================================== */
+
+.task-preview-right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+}
+
+/* ======================================================
+                    ADD TASK
+====================================================== */
+
+.add-task-btn{
+
+    width:170px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#5B57F6;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.add-task-btn:hover{
+
+    background:#4C46E8;
+
+}
+
+/* ======================================================
+                    SEARCH
+====================================================== */
+
+.task-search-box{
+
+    margin-top:22px;
+
+    width:300px;
+
+    height:50px;
+
+    background:white;
+
+    border-radius:12px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 18px;
+
+    box-shadow:
+
+    0 6px 18px rgba(0,0,0,.04);
+
+}
+
+.task-search-box input{
+
+    border:none;
+
+    outline:none;
+
+    width:100%;
+
+    background:transparent;
+
+    font-size:15px;
+
+    color:#202224;
+
+}
+
+.task-search-box input::placeholder{
+
+    color:#9CA3AF;
+
+}
+
+.task-search-box svg{
+
+    font-size:18px;
+
+    color:#9CA3AF;
+
+}
+/* ======================================================
+                    TASK CARD
+====================================================== */
+
+.task-section{
+
+    width:100%;
+
+    background:#FFFFFF;
+
+    border-radius:20px;
+
+    padding:28px 30px;
+
+    margin-bottom:30px;
+
+    box-shadow:
+    0px 10px 35px rgba(16,24,40,.05);
+
+    border:1px solid #EEF1F7;
+
+}
+
+/* ======================================================
+                    CARD HEADER
+====================================================== */
+
+.task-section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:24px;
+
+}
+
+.task-section-header h2{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#202224;
+
+}
+
+.see-more-btn{
+
+    border:none;
+
+    background:none;
+
+    color:#5B57F6;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.see-more-btn:hover{
+
+    color:#4338CA;
+
+}
+
+/* ======================================================
+                    TABLE
+====================================================== */
+
+.task-table{
+
+    width:100%;
+
+}
+
+/* ======================================================
+                    TABLE HEADER
+====================================================== */
+
+.task-table-header{
+
+    display:grid;
+
+    grid-template-columns:
+        90px
+        2.5fr
+        1.2fr
+        1.2fr
+        1fr
+        1fr
+        120px;
+
+    align-items:center;
+
+    height:56px;
+
+    border-bottom:1px solid #EEF1F7;
+
+    color:#7D8592;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/* ======================================================
+                    HEADER COLUMNS
+====================================================== */
+
+.task-table-header>div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+}
+
+.task-table-header svg{
+
+    font-size:13px;
+
+    color:#B0B7C3;
+
+}
+/* ======================================================
+                    TASK ROW
+====================================================== */
+
+.task-row{
+
+    display:grid;
+
+    grid-template-columns:
+        90px
+        2.5fr
+        1.2fr
+        1.2fr
+        1fr
+        1fr
+        120px;
+
+    align-items:center;
+
+    min-height:82px;
+
+    border-bottom:1px solid #F1F3F8;
+
+    transition:all .25s ease;
+
+}
+
+.task-row:last-child{
+
+    border-bottom:none;
+
+}
+
+.task-row:hover{
+
+    background:#FAFBFD;
+
+}
+
+/* ======================================================
+                    CHECKBOX
+====================================================== */
+
+.col-checkbox{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.col-checkbox input{
+
+    width:18px;
+
+    height:18px;
+
+    cursor:pointer;
+
+    accent-color:#5B57F6;
+
+}
+
+/* ======================================================
+                    TASK NAME
+====================================================== */
+
+.task-name{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+.task-name span{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#202224;
+
+}
+
+/* ======================================================
+                    TASK ICON
+====================================================== */
+
+.task-icon{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:20px;
+
+    flex-shrink:0;
+
+}
+
+/* ======================================================
+                    ICON COLORS
+====================================================== */
+
+.task-icon.figma{
+
+    background:#F4EDFF;
+
+    color:#8B5CF6;
+
+}
+
+.task-icon.illustrator{
+
+    background:#FFF4E8;
+
+    color:#F59E0B;
+
+}
+
+.task-icon.photoshop{
+
+    background:#E8F4FF;
+
+    color:#2563EB;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+.task-icon.web{
+
+    background:#EEF4FF;
+
+    color:#0891B2;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+/* ======================================================
+                    TEXT COLUMNS
+====================================================== */
+
+.col-start,
+.col-end,
+.col-member{
+
+    font-size:14px;
+
+    font-weight:500;
+
+    color:#667085;
+
+}
+
+.task-end-date{
+
+    color:#EF4444;
+
+}
+/* ======================================================
+                    STATUS BADGES
+====================================================== */
+
+.status{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:90px;
+
+    height:34px;
+
+    border-radius:8px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.pending{
+
+    background:#FFF3ED;
+
+    color:#F97316;
+
+}
+
+.running{
+
+    background:#EEF2FF;
+
+    color:#5B57F6;
+
+}
+
+.done{
+
+    background:#ECFDF3;
+
+    color:#16A34A;
+
+}
+
+/* ======================================================
+                    ACTION BUTTONS
+====================================================== */
+
+.col-action{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.edit-btn,
+.delete-btn{
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.edit-btn{
+
+    background:#F4F5FF;
+
+    color:#5B57F6;
+
+}
+
+.edit-btn:hover{
+
+    background:#E7E9FF;
+
+}
+
+.delete-btn{
+
+    background:#FFF1F2;
+
+    color:#EF4444;
+
+}
+
+.delete-btn:hover{
+
+    background:#FFE4E6;
+
+}
+
+.edit-btn svg,
+.delete-btn svg{
+
+    font-size:16px;
+
+}
+/* ======================================================
+                    TABLE RESPONSIVE
+====================================================== */
+
+.task-table{
+
+    width:100%;
+
+    overflow-x:auto;
+
+}
+
+.task-table-header,
+.task-row{
+
+    min-width:1180px;
+
+}
+
+/* ======================================================
+                    CARD HOVER
+====================================================== */
+
+.task-section{
+
+    transition:all .3s ease;
+
+}
+
+.task-section:hover{
+
+    box-shadow:
+        0px 18px 45px rgba(15,23,42,.08);
+
+}
+
+/* ======================================================
+                    SEARCH FOCUS
+====================================================== */
+
+.task-search-box{
+
+    border:1px solid transparent;
+
+    transition:all .3s ease;
+
+}
+
+.task-search-box:focus-within{
+
+    border-color:#5B57F6;
+
+    box-shadow:
+        0 0 0 4px rgba(91,87,246,.10);
+
+}
+
+/* ======================================================
+                    TAB HOVER
+====================================================== */
+
+.task-tabs button:hover{
+
+    background:#F3F4F6;
+
+}
+
+.task-tabs button.active:hover{
+
+    background:#5B57F6;
+
+    color:#FFFFFF;
+
+}
+
+/* ======================================================
+                    BUTTON HOVER
+====================================================== */
+
+.add-task-btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.edit-btn:hover,
+.delete-btn:hover{
+
+    transform:translateY(-2px);
+
+}
+/* ======================================================
+                    SCROLLBAR
+====================================================== */
+
+.task-table::-webkit-scrollbar{
+
+    height:7px;
+
+}
+
+.task-table::-webkit-scrollbar-track{
+
+    background:#F4F5F8;
+
+}
+
+.task-table::-webkit-scrollbar-thumb{
+
+    background:#C8CDD7;
+
+    border-radius:20px;
+
+}
+
+/* ======================================================
+                    RESPONSIVE
+====================================================== */
+
+@media(max-width:1200px){
+
+    .task-preview-top{
+
+        flex-direction:column;
+
+        gap:28px;
+
+    }
+
+    .task-preview-right{
+
+        width:100%;
+
+        align-items:flex-start;
+
+    }
+
+    .task-search-box{
+
+        width:100%;
+
+        max-width:360px;
+
+    }
+
+}
+
+@media(max-width:992px){
+
+    .task-preview-main{
+
+        padding:24px;
+
+    }
+
+    .task-section{
+
+        overflow-x:auto;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .task-preview-left h1{
+
+        font-size:30px;
+
+        line-height:38px;
+
+    }
+
+    .task-tabs{
+
+        width:100%;
+
+    }
+
+    .add-task-btn{
+
+        width:100%;
+
+    }
+
+    .task-search-box{
+
+        width:100%;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .task-preview-main{
+
+        padding:16px;
+
+    }
+
+    .task-section{
+
+        padding:20px;
+
+    }
+
+    .task-section-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:12px;
+
+    }
+
+    .task-section-header h2{
+
+        font-size:22px;
+
+    }
+
+}

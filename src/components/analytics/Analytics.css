@@ -1,0 +1,1398 @@
+/* =====================================================
+   ANALYTICS PAGE
+===================================================== */
+
+.analytics-page{
+    display:flex;
+    width:100%;
+    min-height:100vh;
+    background:#F7F8FC;
+    overflow:hidden;
+}
+
+.analytics-main{
+    flex:1;
+    padding:34px;
+    overflow-y:auto;
+}
+
+.analytics-content{
+    display:grid;
+    grid-template-columns:2fr 360px;
+    gap:30px;
+    margin-top:28px;
+    align-items:flex-start;
+}
+
+/* Opens more space for Add Customer Panel */
+
+.analytics-content.panel-open{
+    grid-template-columns:1.75fr 420px;
+}
+
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.analytics-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.analytics-header h1{
+    font-size:32px;
+    font-weight:700;
+    color:#1F2937;
+    margin:0;
+}
+
+.add-customer-btn{
+    border:none;
+    outline:none;
+    background:#5B5BF7;
+    color:#FFFFFF;
+    padding:14px 24px;
+    border-radius:14px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.add-customer-btn:hover{
+    background:#4B4BE5;
+}
+
+
+
+/* =====================================================
+   CUSTOMER SECTION
+===================================================== */
+
+.customers-section{
+    background:#FFFFFF;
+    border-radius:22px;
+    padding:24px;
+    box-shadow:0 10px 30px rgba(0,0,0,.04);
+}
+
+.customer-table{
+    width:100%;
+}
+
+
+
+/* =====================================================
+   TABLE HEADER
+===================================================== */
+
+.table-header{
+
+    display:grid;
+
+    grid-template-columns:
+        2.3fr
+        2.5fr
+        1.7fr
+        1fr
+        45px;
+
+    align-items:center;
+
+    padding:18px 12px;
+
+    border-bottom:1px solid #ECECEC;
+
+    color:#8A8A8A;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.header-name,
+.header-email,
+.header-phone,
+.header-gender{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+}
+
+.header-name svg,
+.header-email svg,
+.header-phone svg,
+.header-gender svg{
+
+    font-size:16px;
+
+    color:#B5B5B5;
+
+}
+/* =====================================================
+   CUSTOMER ROW
+===================================================== */
+
+.customer-row{
+
+    display:grid;
+
+    grid-template-columns:
+        2.3fr
+        2.5fr
+        1.7fr
+        1fr
+        45px;
+
+    align-items:center;
+
+    padding:18px 12px;
+
+    border-bottom:1px solid #F1F3F5;
+
+    transition:.25s;
+
+}
+
+.customer-row:last-child{
+
+    border-bottom:none;
+
+}
+
+.customer-row:hover{
+
+    background:#F8FAFD;
+
+    border-radius:12px;
+
+}
+
+.customer-name{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.customer-name img{
+
+    width:44px;
+
+    height:44px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.customer-name span{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#242424;
+
+}
+
+.customer-email{
+
+    font-size:14px;
+
+    color:#6E6E6E;
+
+}
+
+.customer-phone{
+
+    font-size:14px;
+
+    color:#6E6E6E;
+
+}
+
+
+
+/* =====================================================
+   GENDER BADGES
+===================================================== */
+
+.customer-gender{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.gender{
+
+    min-width:82px;
+
+    height:34px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.gender.male{
+
+    color:#377DFF;
+
+    background:#EAF2FF;
+
+}
+
+.gender.female{
+
+    color:#FF4D8D;
+
+    background:#FFEAF3;
+
+}
+
+
+
+/* =====================================================
+   ACTION MENU
+===================================================== */
+
+.customer-menu{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.customer-menu svg{
+
+    font-size:18px;
+
+    color:#A5A5A5;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.customer-menu svg:hover{
+
+    color:#5B5BF7;
+
+}
+
+/* ===========================================
+   CUSTOMER MENU
+=========================================== */
+
+.customer-menu{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.menu-btn{
+
+    width:34px;
+
+    height:34px;
+
+    border:none;
+
+    background:transparent;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    border-radius:8px;
+
+    transition:.25s;
+
+}
+
+.menu-btn:hover{
+
+    background:#F4F6FC;
+
+}
+
+.menu-btn svg{
+
+    font-size:20px;
+
+    color:#6B7280;
+
+}
+
+
+
+/* ===========================================
+   DROPDOWN
+=========================================== */
+
+.menu-dropdown{
+
+    position:absolute;
+
+    top:42px;
+
+    right:0;
+
+    width:145px;
+
+    background:#FFFFFF;
+
+    border-radius:14px;
+
+    padding:8px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
+
+    z-index:100;
+
+    animation:dropdown .18s ease;
+
+}
+
+@keyframes dropdown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-8px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* ===========================================
+   MENU ITEMS
+=========================================== */
+
+.menu-item{
+
+    width:100%;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:transparent;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:0 12px;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    transition:.25s;
+
+}
+
+.edit-item{
+
+    color:#4F7CFF;
+
+}
+
+.edit-item:hover{
+
+    background:#EEF4FF;
+
+}
+
+.delete-item{
+
+    color:#FF4D4F;
+
+}
+
+.delete-item:hover{
+
+    background:#FFF1F1;
+
+}
+
+/* =====================================================
+   PROFILE SECTION
+===================================================== */
+
+.profile-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+
+
+/* =====================================================
+   PROFILE CARD
+===================================================== */
+
+.profile-card{
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:34px 28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.04);
+
+}
+
+.profile-image{
+
+    width:120px;
+
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    margin-bottom:20px;
+
+}
+
+.profile-card h2{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#242424;
+
+    margin-bottom:6px;
+
+}
+
+.profile-card p{
+
+    font-size:15px;
+
+    color:#888888;
+
+}
+
+
+
+/* =====================================================
+   CONTACT CARD
+===================================================== */
+
+.contact-card{
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:26px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.04);
+
+}
+
+.contact-card h3{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#222;
+
+    margin-bottom:24px;
+
+}
+
+.contact-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:16px;
+
+    margin-bottom:22px;
+
+}
+
+.contact-item:last-child{
+
+    margin-bottom:0;
+
+}
+
+.contact-item svg{
+
+    color:#5B5BF7;
+
+    font-size:20px;
+
+    margin-top:2px;
+
+}
+
+.contact-item span{
+
+    font-size:14px;
+
+    line-height:1.8;
+
+    color:#707070;
+
+}
+
+
+
+/* =====================================================
+   PERFORMANCE CARD
+===================================================== */
+
+.performance-card{
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:24px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.04);
+
+}
+
+.performance-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:24px;
+
+}
+
+.performance-header h3{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#242424;
+
+}
+
+.performance-header svg{
+
+    font-size:18px;
+
+    color:#A8A8A8;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.performance-header svg:hover{
+
+    color:#5B5BF7;
+
+}
+
+.performance-chart{
+
+    width:100%;
+
+    display:block;
+
+}
+
+
+
+/* =====================================================
+   PROGRESS SECTION
+===================================================== */
+
+.progress-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+}
+
+.progress-card{
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:22px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.04);
+
+    transition:.3s;
+
+}
+
+.progress-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.progress-image{
+
+    width:95px;
+
+    height:95px;
+
+    object-fit:contain;
+
+    margin:0 auto 18px;
+
+    display:block;
+
+}
+
+.progress-card h4{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#1F2937;
+
+    margin-bottom:8px;
+
+}
+
+.progress-card p{
+
+    font-size:14px;
+
+    font-weight:500;
+
+    color:#7B7B7B;
+
+    line-height:1.6;
+
+}
+/* =====================================================
+   ADD CUSTOMER PANEL
+===================================================== */
+
+.add-customer-panel{
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.04);
+
+    display:flex;
+
+    flex-direction:column;
+
+    animation:slideIn .3s ease;
+
+}
+
+@keyframes slideIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+
+/* =====================================================
+   PANEL HEADER
+===================================================== */
+
+.panel-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:28px;
+
+}
+
+.panel-header h2{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#1F2937;
+
+    margin:0;
+
+}
+
+.close-panel{
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:50%;
+
+    background:#F3F4F8;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.close-panel svg{
+
+    font-size:22px;
+
+    color:#5F6368;
+
+}
+
+.close-panel:hover{
+
+    background:#5B5BF7;
+
+}
+
+.close-panel:hover svg{
+
+    color:#FFFFFF;
+
+}
+
+
+
+/* =====================================================
+   PHOTO UPLOAD
+===================================================== */
+
+.upload-wrapper{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:30px;
+
+}
+
+.upload-circle{
+
+    width:110px;
+
+    height:110px;
+
+    border-radius:50%;
+
+    border:2px dashed #D7D7E8;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#F8F9FF;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.upload-circle:hover{
+
+    border-color:#5B5BF7;
+
+    background:#EEF1FF;
+
+}
+
+.upload-circle svg{
+
+    font-size:34px;
+
+    color:#5B5BF7;
+
+}
+
+.upload-wrapper p{
+
+    margin-top:14px;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    color:#777777;
+
+}
+
+
+
+/* =====================================================
+   CUSTOMER FORM
+===================================================== */
+
+.customer-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.form-group label{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#444444;
+
+    margin-bottom:8px;
+
+}
+
+.form-group input,
+.form-group select{
+
+    width:100%;
+
+    height:50px;
+
+    border:1px solid #E4E6EF;
+
+    border-radius:12px;
+
+    padding:0 16px;
+
+    outline:none;
+
+    font-size:14px;
+
+    background:#FFFFFF;
+
+    transition:.3s;
+
+}
+
+.form-group input:focus,
+.form-group select:focus{
+
+    border-color:#5B5BF7;
+
+    box-shadow:0 0 0 3px rgba(91,91,247,.12);
+
+}
+
+.form-group input::placeholder{
+
+    color:#B0B3C0;
+
+}
+
+
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
+
+.submit-btn{
+
+    width:100%;
+
+    height:52px;
+
+    border:none;
+
+    outline:none;
+
+    background:#5B5BF7;
+
+    color:#FFFFFF;
+
+    border-radius:14px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    margin-top:12px;
+
+    transition:.3s;
+
+}
+
+.submit-btn:hover{
+
+    background:#4747EB;
+
+    transform:translateY(-2px);
+
+}
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+.analytics-main::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.analytics-main::-webkit-scrollbar-thumb{
+
+    background:#D7D7D7;
+
+    border-radius:20px;
+
+}
+
+.analytics-main::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+
+
+/* =====================================================
+   SMALL ANIMATIONS
+===================================================== */
+
+.profile-card,
+.contact-card,
+.performance-card,
+.progress-card,
+.customers-section,
+.add-customer-panel{
+
+    transition:.3s ease;
+
+}
+
+.profile-card:hover,
+.contact-card:hover,
+.performance-card:hover,
+.progress-card:hover,
+.add-customer-panel:hover{
+
+    box-shadow:0 16px 40px rgba(91,91,247,.08);
+
+}
+
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width:1400px){
+
+    .analytics-content{
+
+        grid-template-columns:1.8fr 330px;
+
+    }
+
+    .analytics-content.panel-open{
+
+        grid-template-columns:1.6fr 360px;
+
+    }
+
+}
+
+@media (max-width:1200px){
+
+    .analytics-main{
+
+        padding:28px;
+
+    }
+
+    .analytics-content,
+    .analytics-content.panel-open{
+
+        grid-template-columns:1fr;
+
+        gap:28px;
+
+    }
+
+    .profile-section{
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:22px;
+
+    }
+
+    .performance-card{
+
+        grid-column:1/3;
+
+    }
+
+    .progress-wrapper{
+
+        grid-column:1/3;
+
+    }
+
+    .add-customer-panel{
+
+        max-width:650px;
+
+        width:100%;
+
+        margin:0 auto;
+
+    }
+
+}
+
+@media (max-width:992px){
+
+    .analytics-main{
+
+        padding:22px;
+
+    }
+
+    .analytics-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .add-customer-btn{
+
+        width:220px;
+
+    }
+
+    .customer-table{
+
+        overflow-x:auto;
+
+    }
+
+    .table-header,
+    .customer-row{
+
+        width:900px;
+
+    }
+
+    .profile-section{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .performance-card,
+    .progress-wrapper{
+
+        grid-column:auto;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .analytics-main{
+
+        padding:18px;
+
+    }
+
+    .analytics-header h1{
+
+        font-size:26px;
+
+    }
+
+    .customers-section{
+
+        padding:18px;
+
+    }
+
+    .profile-card{
+
+        padding:28px 20px;
+
+    }
+
+    .profile-image{
+
+        width:95px;
+
+        height:95px;
+
+    }
+
+    .profile-card h2{
+
+        font-size:22px;
+
+    }
+
+    .progress-wrapper{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .progress-card{
+
+        padding:20px;
+
+    }
+
+    .add-customer-panel{
+
+        padding:22px;
+
+    }
+
+    .upload-circle{
+
+        width:90px;
+
+        height:90px;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .analytics-main{
+
+        padding:14px;
+
+    }
+
+    .analytics-header{
+
+        gap:16px;
+
+    }
+
+    .analytics-header h1{
+
+        font-size:22px;
+
+    }
+
+    .add-customer-btn{
+
+        width:100%;
+
+    }
+
+    .customers-section,
+    .profile-card,
+    .contact-card,
+    .performance-card,
+    .progress-card,
+    .add-customer-panel{
+
+        border-radius:16px;
+
+    }
+
+    .profile-image{
+
+        width:82px;
+
+        height:82px;
+
+    }
+
+    .profile-card h2{
+
+        font-size:20px;
+
+    }
+
+    .profile-card p,
+    .contact-item span,
+    .progress-card p{
+
+        font-size:13px;
+
+    }
+
+    .progress-card h4{
+
+        font-size:24px;
+
+    }
+
+    .panel-header h2{
+
+        font-size:20px;
+
+    }
+
+    .upload-circle{
+
+        width:80px;
+
+        height:80px;
+
+    }
+
+    .upload-circle svg{
+
+        font-size:28px;
+
+    }
+
+    .submit-btn{
+
+        height:48px;
+
+    }
+
+}

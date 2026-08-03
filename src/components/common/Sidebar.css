@@ -1,0 +1,268 @@
+/* ======================================================
+                    SIDEBAR
+====================================================== */
+
+.sidebar{
+    width:240px;
+    min-height:100vh;
+    background:#FFFFFF;
+    border-right:1px solid #EEF1F6;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    padding:28px 18px;
+}
+
+/* ======================================================
+                    LOGO
+====================================================== */
+
+.sidebar-logo{
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    margin-bottom:42px;
+}
+
+.sidebar-logo img{
+    width:44px;
+    height:44px;
+}
+
+.sidebar-logo h2{
+    font-size:28px;
+    font-weight:700;
+    color:#202224;
+}
+
+/* ======================================================
+                    MENU
+====================================================== */
+
+.sidebar-menu{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.sidebar-menu li{
+    margin-bottom:8px;
+}
+
+/* ======================================================
+                    LINKS
+====================================================== */
+
+.sidebar-link{
+
+    width:100%;
+    height:56px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 18px;
+
+    border-radius:16px;
+
+    text-decoration:none;
+
+    color:#8B8D97;
+
+    transition:.3s;
+}
+
+.sidebar-left{
+
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.sidebar-left img{
+
+    width:22px;
+    height:22px;
+
+    flex-shrink:0;
+}
+
+.sidebar-left span{
+
+    font-size:17px;
+    font-weight:500;
+}
+
+/* ======================================================
+                    ACTIVE
+====================================================== */
+
+.sidebar-link:hover{
+
+    background:#F5F6FF;
+
+}
+
+.sidebar-link.active{
+
+    background:#5B57F6;
+    color:#FFFFFF;
+
+}
+
+.sidebar-link.active img{
+
+    filter:brightness(0) invert(1);
+
+}
+
+/* ======================================================
+                    MESSAGE COUNT
+====================================================== */
+
+.message-count{
+
+    width:22px;
+    height:22px;
+
+    border-radius:50%;
+
+    background:#FF5D5D;
+
+    color:#FFFFFF;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:11px;
+    font-weight:600;
+
+    flex-shrink:0;
+}
+
+.sidebar-link.active .message-count{
+
+    background:#FFFFFF;
+    color:#5B57F6;
+
+}
+
+/* ======================================================
+                    UPGRADE CARD
+====================================================== */
+
+.upgrade-card{
+
+    margin-top:38px;
+
+    background:#F4F7FF;
+
+    border-radius:24px;
+
+    padding:20px 18px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.upgrade-image{
+
+    width:150px;
+
+    margin-bottom:18px;
+}
+
+.upgrade-btn{
+
+    width:100%;
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#5B57F6;
+
+    color:#FFFFFF;
+
+    font-size:14px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.upgrade-btn:hover{
+
+    background:#4943E8;
+
+}
+
+/* ======================================================
+                    PROFILE
+====================================================== */
+
+.sidebar-profile{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding-top:22px;
+}
+
+.profile-left{
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+}
+
+.profile-left img{
+
+    width:46px;
+    height:46px;
+
+    border-radius:50%;
+}
+
+.profile-left h4{
+
+    font-size:15px;
+    font-weight:600;
+
+    color:#202224;
+
+    margin-bottom:3px;
+}
+
+.profile-left p{
+
+    font-size:13px;
+
+    color:#9CA3AF;
+}
+
+.logout-icon{
+
+    width:22px;
+    height:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.logout-icon:hover{
+
+    transform:scale(1.1);
+
+}

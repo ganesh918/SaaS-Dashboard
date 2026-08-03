@@ -1,0 +1,549 @@
+/* ==========================================
+   INVOICE PAGE
+========================================== */
+
+.invoice-page{
+    display:flex;
+    width:100%;
+    min-height:100vh;
+    background:#f6f8fc;
+    font-family:"Inter",sans-serif;
+}
+
+.invoice-main{
+    flex:1;
+    padding:32px;
+    overflow-x:auto;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.invoice-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:28px;
+}
+
+.invoice-header h1{
+    font-size:28px;
+    font-weight:700;
+    color:#1f2937;
+    margin:0;
+}
+
+.invoice-header-right{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+/* ==========================================
+   SEARCH
+========================================== */
+
+.invoice-search{
+    width:320px;
+    height:46px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:0 18px;
+    background:#fff;
+    border:1px solid #e6e8ef;
+    border-radius:12px;
+}
+
+.invoice-search svg{
+    color:#7b8190;
+    font-size:18px;
+}
+
+.invoice-search input{
+    flex:1;
+    border:none;
+    outline:none;
+    background:transparent;
+    font-size:15px;
+    color:#222;
+}
+
+.invoice-search input::placeholder{
+    color:#9ca3af;
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.add-new-btn{
+    border:none;
+    cursor:pointer;
+    padding:13px 28px;
+    border-radius:12px;
+    background:#5f5cf1;
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.add-new-btn:hover{
+    background:#4b47d8;
+}
+
+/* ==========================================
+   TABLE
+========================================== */
+
+.invoice-table{
+    width:100%;
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 30px rgba(0,0,0,.06);
+}
+/* ==========================================
+   TABLE HEADER
+========================================== */
+
+.invoice-table-header{
+    display:grid;
+    grid-template-columns:
+        60px
+        130px
+        260px
+        260px
+        170px
+        150px
+        110px
+        70px;
+    align-items:center;
+    padding:18px 24px;
+    background:#f8f9fd;
+    border-bottom:1px solid #eceef5;
+    font-size:14px;
+    font-weight:600;
+    color:#6b7280;
+}
+
+.invoice-table-header>div{
+    display:flex;
+    align-items:center;
+    gap:4px;
+}
+
+.invoice-table-header svg{
+    font-size:18px;
+    color:#a3a8b6;
+}
+
+/* ==========================================
+   TABLE ROW
+========================================== */
+
+.invoice-row{
+    display:grid;
+    grid-template-columns:
+        60px
+        130px
+        260px
+        260px
+        170px
+        150px
+        110px
+        70px;
+    align-items:center;
+    padding:18px 24px;
+    border-bottom:1px solid #f1f3f8;
+    transition:.25s ease;
+    background:#fff;
+}
+
+.invoice-row:last-child{
+    border-bottom:none;
+}
+
+.invoice-row:hover{
+    background:#fafbff;
+}
+
+/* ==========================================
+   CHECKBOX
+========================================== */
+
+.checkbox-column{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.checkbox-column input{
+    width:18px;
+    height:18px;
+    cursor:pointer;
+}
+
+/* ==========================================
+   INVOICE ID
+========================================== */
+
+.invoice-id{
+    font-size:14px;
+    font-weight:600;
+    color:#2f3640;
+}
+
+/* ==========================================
+   CUSTOMER
+========================================== */
+
+.invoice-name{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.invoice-name img{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.invoice-name span{
+    font-size:15px;
+    font-weight:600;
+    color:#222;
+}
+
+/* ==========================================
+   EMAIL
+========================================== */
+
+.invoice-email{
+    font-size:14px;
+    color:#70798b;
+}
+
+/* ==========================================
+   DATE
+========================================== */
+
+.invoice-date{
+    font-size:14px;
+    color:#70798b;
+}
+/* ==========================================
+   STATUS BADGES
+========================================== */
+
+.invoice-status{
+    display:flex;
+    align-items:center;
+}
+
+.status{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    min-width:95px;
+    padding:8px 16px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.status.complete{
+    background:#eaf8f1;
+    color:#22a06b;
+}
+
+.status.pending{
+    background:#fff7e6;
+    color:#d97706;
+}
+
+.status.cancel{
+    background:#fdecec;
+    color:#dc2626;
+}
+
+/* ==========================================
+   FAVOURITE STAR
+========================================== */
+
+.invoice-favourite{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.filled-star{
+    color:#ffc107;
+    font-size:18px;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.empty-star{
+    color:#c8ccd7;
+    font-size:18px;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.filled-star:hover,
+.empty-star:hover{
+    transform:scale(1.15);
+}
+
+/* ==========================================
+   ACTION MENU
+========================================== */
+
+.invoice-menu{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.menu-btn{
+    width:34px;
+    height:34px;
+    border:none;
+    background:transparent;
+    border-radius:8px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.menu-btn svg{
+    font-size:18px;
+    color:#6b7280;
+}
+
+.menu-btn:hover{
+    background:#f3f4f6;
+}
+
+/* ==========================================
+   DROPDOWN
+========================================== */
+
+.menu-dropdown{
+    position:absolute;
+    top:42px;
+    right:0;
+    width:150px;
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+    border:1px solid #eceef5;
+    overflow:hidden;
+    z-index:100;
+}
+
+.menu-item{
+    width:100%;
+    padding:13px 18px;
+    background:none;
+    border:none;
+    text-align:left;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:500;
+    color:#374151;
+    transition:.2s;
+}
+
+.menu-item:hover{
+    background:#f8f9fd;
+}
+
+.delete-item{
+    color:#dc2626;
+}
+
+.delete-item:hover{
+    background:#fdecec;
+}
+
+/* ==========================================
+   DELETE ICON
+========================================== */
+
+.invoice-action{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.invoice-action svg{
+    font-size:20px;
+    color:#9ca3af;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.invoice-action svg:hover{
+    color:#dc2626;
+}
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:1400px){
+
+    .invoice-main{
+        padding:24px;
+    }
+
+    .invoice-table{
+        overflow-x:auto;
+    }
+
+    .invoice-table-header,
+    .invoice-row{
+        min-width:1200px;
+    }
+
+}
+
+@media (max-width:992px){
+
+    .invoice-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    .invoice-header-right{
+        width:100%;
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .invoice-search{
+        width:100%;
+    }
+
+    .add-new-btn{
+        width:100%;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .invoice-main{
+        padding:18px;
+    }
+
+    .invoice-header h1{
+        font-size:24px;
+    }
+
+    .invoice-table{
+        border-radius:14px;
+    }
+
+}
+
+@media (max-width:576px){
+
+    .invoice-main{
+        padding:15px;
+    }
+
+    .invoice-header{
+        margin-bottom:20px;
+    }
+
+    .invoice-header h1{
+        font-size:22px;
+    }
+
+    .invoice-search{
+        height:44px;
+        padding:0 14px;
+    }
+
+    .invoice-search input{
+        font-size:14px;
+    }
+
+    .add-new-btn{
+        padding:12px 18px;
+        font-size:14px;
+    }
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+.invoice-table::-webkit-scrollbar{
+    height:8px;
+}
+
+.invoice-table::-webkit-scrollbar-track{
+    background:#edf0f5;
+    border-radius:20px;
+}
+
+.invoice-table::-webkit-scrollbar-thumb{
+    background:#c7ccd8;
+    border-radius:20px;
+}
+
+.invoice-table::-webkit-scrollbar-thumb:hover{
+    background:#9ea6b5;
+}
+
+/* ==========================================
+   INPUTS & BUTTONS
+========================================== */
+
+button,
+input{
+    font-family:inherit;
+}
+
+button:focus,
+input:focus{
+    outline:none;
+}
+
+input[type="checkbox"]{
+    accent-color:#5f5cf1;
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+.invoice-row{
+    animation:fadeIn .35s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}

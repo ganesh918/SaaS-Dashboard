@@ -1,0 +1,615 @@
+/* ===========================
+   CREATE INVOICE PAGE
+=========================== */
+
+.create-invoice-page{
+    display:flex;
+    min-height:100vh;
+    background:#f5f6fa;
+    font-family:Inter,sans-serif;
+}
+
+.create-invoice-main{
+    flex:1;
+    display:flex;
+    gap:30px;
+    padding:32px;
+    overflow:auto;
+}
+
+/* ===========================
+   LEFT FORM
+=========================== */
+
+.invoice-form-section{
+    flex:1.1;
+    background:#ffffff;
+    border-radius:18px;
+    padding:32px;
+    box-shadow:0 6px 20px rgba(0,0,0,.05);
+}
+
+.invoice-form-section h2{
+    font-size:28px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:28px;
+}
+
+/* ===========================
+   IMAGE UPLOAD
+=========================== */
+
+.upload-wrapper{
+    display:flex;
+    justify-content:center;
+    margin-bottom:35px;
+}
+
+.upload-circle{
+    width:110px;
+    height:110px;
+    border:2px dashed #d7dce5;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:34px;
+    color:#7b61ff;
+    cursor:pointer;
+    transition:.3s;
+    background:#fafbff;
+}
+
+.upload-circle:hover{
+    border-color:#7b61ff;
+    background:#f4f2ff;
+}
+
+/* ===========================
+   FORM GRID
+=========================== */
+
+.invoice-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+    margin-bottom:35px;
+}
+
+.full-width{
+    grid-column:1/-1;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    font-size:14px;
+    font-weight:600;
+    color:#555;
+    margin-bottom:8px;
+}
+
+.form-group input{
+    width:100%;
+    height:48px;
+    padding:0 15px;
+    border:1px solid #d8dde8;
+    border-radius:10px;
+    outline:none;
+    font-size:14px;
+    transition:.25s;
+    background:#fff;
+}
+
+.form-group input:focus{
+    border-color:#7b61ff;
+}
+
+/* ===========================
+   INPUT ICONS
+=========================== */
+
+.date-input,
+.address-input{
+    position:relative;
+}
+
+.date-input input,
+.address-input input{
+    padding-right:45px;
+}
+
+.date-input svg,
+.address-input svg{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#8b8b8b;
+    font-size:18px;
+    pointer-events:none;
+}
+/* ===========================
+   PRODUCT SECTION
+=========================== */
+
+.product-section{
+    margin-top:10px;
+}
+
+.product-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.product-header h3{
+    font-size:20px;
+    font-weight:700;
+    color:#111827;
+}
+
+.add-product-btn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:#7b61ff;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    padding:12px 20px;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.add-product-btn:hover{
+    background:#6848f4;
+}
+
+.product-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-bottom:30px;
+}
+
+.product-table thead{
+    background:#f6f7fb;
+}
+
+.product-table th{
+    padding:16px;
+    text-align:left;
+    font-size:14px;
+    font-weight:600;
+    color:#555;
+    border-bottom:1px solid #eceef4;
+}
+
+.product-table td{
+    padding:16px;
+    border-bottom:1px solid #eceef4;
+    vertical-align:middle;
+}
+
+.product-table input{
+    width:100%;
+    height:42px;
+    border:1px solid #d7dce5;
+    border-radius:8px;
+    padding:0 12px;
+    font-size:14px;
+    outline:none;
+    transition:.25s;
+}
+
+.product-table input:focus{
+    border-color:#7b61ff;
+}
+
+.product-table td:nth-child(2){
+    width:120px;
+}
+
+.product-table td:nth-child(3){
+    width:100px;
+}
+
+.product-table td:nth-child(4){
+    width:150px;
+    font-weight:600;
+    color:#111827;
+}
+
+.delete-product-btn{
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:8px;
+    background:#feecec;
+    color:#ef4444;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.delete-product-btn:hover{
+    background:#ef4444;
+    color:#fff;
+}
+
+/* ===========================
+   ACTION BUTTONS
+=========================== */
+
+.invoice-buttons{
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
+    margin-top:30px;
+}
+
+.send-btn{
+    padding:13px 28px;
+    border:1px solid #d7dce5;
+    background:#fff;
+    color:#555;
+    border-radius:10px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.send-btn:hover{
+    background:#f5f5f5;
+}
+
+.create-btn{
+    padding:13px 30px;
+    background:#7b61ff;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.create-btn:hover{
+    background:#6848f4;
+}
+/* ===========================
+   INVOICE PREVIEW
+=========================== */
+
+.invoice-preview-section{
+    width:420px;
+    min-width:420px;
+    background:#ffffff;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 6px 20px rgba(0,0,0,.05);
+    display:flex;
+    flex-direction:column;
+}
+
+.preview-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:28px;
+}
+
+.preview-header h2{
+    font-size:28px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:4px;
+}
+
+.preview-header p{
+    color:#7b7b7b;
+    font-size:14px;
+}
+
+.preview-actions{
+    display:flex;
+    gap:10px;
+}
+
+.preview-icon{
+    width:42px;
+    height:42px;
+    border:none;
+    background:#f5f6fa;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:.3s;
+    font-size:18px;
+    color:#555;
+}
+
+.preview-icon:hover{
+    background:#7b61ff;
+    color:#fff;
+}
+
+/* ===========================
+   COMPANY
+=========================== */
+
+.preview-company{
+    margin-bottom:28px;
+}
+
+.preview-company h3{
+    font-size:22px;
+    font-weight:700;
+    color:#7b61ff;
+    margin-bottom:4px;
+}
+
+.preview-company p{
+    font-size:14px;
+    color:#666;
+}
+
+/* ===========================
+   CUSTOMER DETAILS
+=========================== */
+
+.preview-details{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.preview-details span{
+    display:block;
+    font-size:12px;
+    color:#9ca3af;
+    margin-bottom:8px;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+}
+
+.preview-details h4{
+    font-size:16px;
+    font-weight:600;
+    color:#111827;
+    margin-bottom:6px;
+}
+
+.preview-details p{
+    font-size:14px;
+    color:#555;
+    margin-bottom:3px;
+}
+
+.preview-date{
+    text-align:right;
+}
+
+/* ===========================
+   PREVIEW TABLE
+=========================== */
+
+.preview-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-bottom:25px;
+}
+
+.preview-table thead{
+    background:#f6f7fb;
+}
+
+.preview-table th{
+    padding:14px;
+    text-align:left;
+    font-size:13px;
+    font-weight:600;
+    color:#555;
+    border-bottom:1px solid #eceef4;
+}
+
+.preview-table td{
+    padding:14px;
+    font-size:14px;
+    color:#444;
+    border-bottom:1px solid #eceef4;
+}
+
+.preview-table tbody tr:last-child td{
+    border-bottom:none;
+}
+/* ===========================
+   INVOICE SUMMARY
+=========================== */
+
+.invoice-summary{
+    margin-top:10px;
+    border-top:1px solid #eceef4;
+    padding-top:20px;
+}
+
+.summary-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:14px;
+    font-size:15px;
+    color:#555;
+}
+
+.summary-row span:last-child{
+    font-weight:600;
+    color:#111827;
+}
+
+.total-row{
+    margin-top:18px;
+    padding-top:18px;
+    border-top:1px dashed #d7dce5;
+    font-size:18px;
+    font-weight:700;
+}
+
+.total-row span{
+    color:#111827;
+}
+
+/* ===========================
+   NOTES
+=========================== */
+
+.invoice-note{
+    margin-top:35px;
+    padding:20px;
+    background:#f8f9fc;
+    border-radius:12px;
+    border:1px solid #eceef4;
+}
+
+.invoice-note h4{
+    font-size:16px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:10px;
+}
+
+.invoice-note p{
+    font-size:14px;
+    line-height:1.7;
+    color:#666;
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+.create-invoice-main::-webkit-scrollbar{
+    width:8px;
+}
+
+.create-invoice-main::-webkit-scrollbar-thumb{
+    background:#d6d9e3;
+    border-radius:20px;
+}
+
+.create-invoice-main::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:1200px){
+
+    .create-invoice-main{
+        flex-direction:column;
+    }
+
+    .invoice-preview-section{
+        width:100%;
+        min-width:100%;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .create-invoice-main{
+        padding:20px;
+        gap:20px;
+    }
+
+    .invoice-form-section,
+    .invoice-preview-section{
+        padding:20px;
+    }
+
+    .invoice-grid{
+        grid-template-columns:1fr;
+    }
+
+    .full-width{
+        grid-column:auto;
+    }
+
+    .product-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+    .invoice-buttons{
+        flex-direction:column;
+    }
+
+    .send-btn,
+    .create-btn{
+        width:100%;
+    }
+
+    .preview-details{
+        flex-direction:column;
+    }
+
+    .preview-date{
+        text-align:left;
+    }
+
+    .preview-table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+}
+
+@media (max-width:576px){
+
+    .invoice-form-section h2,
+    .preview-header h2{
+        font-size:24px;
+    }
+
+    .upload-circle{
+        width:90px;
+        height:90px;
+        font-size:28px;
+    }
+
+    .product-table th,
+    .product-table td,
+    .preview-table th,
+    .preview-table td{
+        padding:10px;
+        font-size:13px;
+    }
+
+    .summary-row{
+        font-size:14px;
+    }
+
+    .total-row{
+        font-size:16px;
+    }
+
+}

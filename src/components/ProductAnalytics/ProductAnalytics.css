@@ -1,0 +1,738 @@
+/* ==========================================
+   PRODUCT ANALYTICS PAGE
+========================================== */
+
+.pa-page{
+    display:flex;
+    min-height:100vh;
+    background:#f5f7fb;
+}
+
+.pa-main{
+    flex:1;
+    padding:32px;
+    overflow-y:auto;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.pa-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:32px;
+}
+
+.pa-header h1{
+    font-size:32px;
+    font-weight:700;
+    color:#1f2937;
+    margin-bottom:18px;
+}
+
+.pa-tabs{
+    display:flex;
+    gap:12px;
+}
+
+.pa-tabs button{
+    border:none;
+    background:#eef2ff;
+    color:#4b5563;
+    padding:10px 24px;
+    border-radius:10px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.pa-tabs button.active{
+    background:#4b6bfb;
+    color:#fff;
+}
+
+.pa-header-actions{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.pa-date{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:#fff;
+    border-radius:12px;
+    padding:12px 18px;
+    box-shadow:0 8px 24px rgba(0,0,0,.05);
+    cursor:pointer;
+}
+
+.pa-date span{
+    font-size:14px;
+    font-weight:500;
+    color:#374151;
+}
+
+.pa-add-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border:none;
+    background:#4b6bfb;
+    color:#fff;
+    padding:14px 24px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+}
+
+/* ==========================================
+   STATISTICS
+========================================== */
+
+.pa-statistics{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+    margin-bottom:30px;
+}
+
+.pa-stat-card{
+    background:#fff;
+    border-radius:22px;
+    padding:28px;
+    box-shadow:0 10px 35px rgba(18,38,63,.05);
+}
+
+.pa-card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.pa-card-left{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.pa-card-icon{
+    width:70px;
+    height:70px;
+    border-radius:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+}
+
+.product-icon{
+    background:#eef3ff;
+}
+
+.sales-icon{
+    background:#fef3c7;
+    color:#f59e0b;
+}
+
+.pa-card-icon img{
+    width:34px;
+    height:34px;
+    object-fit:contain;
+}
+
+.pa-card-text p{
+    color:#8d95a5;
+    font-size:15px;
+    margin-bottom:8px;
+}
+
+.pa-card-text h2{
+    color:#1f2937;
+    font-size:32px;
+    font-weight:700;
+}
+
+.pa-badge{
+    background:#eaf8ee;
+    color:#22a45d;
+    padding:8px 14px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+}
+
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
+.pa-content{
+    display:grid;
+    grid-template-columns:2.1fr 1fr;
+    gap:28px;
+}
+
+.pa-left{
+    width:100%;
+}
+
+.pa-right{
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+}
+/* ==========================================
+   TOP SELLING PRODUCTS
+========================================== */
+
+.pa-products-card{
+    background:#fff;
+    border-radius:22px;
+    padding:30px;
+    box-shadow:0 10px 35px rgba(18,38,63,.05);
+}
+
+.pa-products-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:28px;
+}
+
+.pa-products-header h2{
+    font-size:22px;
+    font-weight:700;
+    color:#1f2937;
+}
+
+.pa-products-header button{
+    border:none;
+    background:#eef2ff;
+    color:#4b6bfb;
+    padding:10px 20px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.pa-products-header button:hover{
+    background:#4b6bfb;
+    color:#fff;
+}
+
+.pa-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.pa-table thead th{
+    padding:18px 12px;
+    font-size:14px;
+    font-weight:600;
+    color:#98a2b3;
+    text-align:left;
+    border-bottom:1px solid #edf0f5;
+    white-space:nowrap;
+}
+
+.pa-table thead th svg{
+    margin-left:6px;
+    font-size:12px;
+    vertical-align:middle;
+}
+
+.pa-table tbody td{
+    padding:18px 12px;
+    font-size:15px;
+    color:#374151;
+    border-bottom:1px solid #f3f4f6;
+    vertical-align:middle;
+}
+
+.pa-table tbody tr:last-child td{
+    border-bottom:none;
+}
+
+.pa-table tbody tr{
+    transition:.25s;
+}
+
+.pa-table tbody tr:hover{
+    background:#fafcff;
+}
+
+.pa-rank{
+    width:70px;
+    font-size:18px;
+    font-weight:700;
+    color:#4b6bfb;
+}
+
+.pa-rank svg{
+    color:#f7b500;
+    font-size:20px;
+}
+
+.pa-product{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.pa-product-image{
+    width:52px;
+    height:52px;
+    border-radius:14px;
+    background:#f8f9fc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-shrink:0;
+}
+
+.pa-product-image img{
+    width:34px;
+    height:34px;
+    object-fit:contain;
+}
+
+.pa-product span{
+    font-size:15px;
+    font-weight:600;
+    color:#1f2937;
+}
+
+.pa-sales{
+    font-weight:700;
+    color:#4b6bfb;
+}
+/* ==========================================
+   PRODUCT ADD BY MONTH
+========================================== */
+
+.pa-month-card,
+.pa-sales-card{
+    background:#ffffff;
+    border-radius:22px;
+    padding:28px;
+    box-shadow:0 10px 35px rgba(18,38,63,.05);
+}
+
+.pa-month-header,
+.pa-sales-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:28px;
+}
+
+.pa-month-header h2,
+.pa-sales-header h2{
+    font-size:20px;
+    font-weight:700;
+    color:#1f2937;
+}
+
+.pa-month-header button,
+.pa-sales-header button{
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:10px;
+    background:#f5f7fb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    color:#6b7280;
+    transition:.3s;
+}
+
+.pa-month-header button:hover,
+.pa-sales-header button:hover{
+    background:#4b6bfb;
+    color:#ffffff;
+}
+
+/* ==========================================
+   BAR CHART
+========================================== */
+
+.pa-bar-chart{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.pa-bar-item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.pa-bar-row{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    width:100%;
+}
+
+.pa-month-label{
+    flex-shrink:0;
+    width:42px;
+    font-size:14px;
+    color:#4b5563;
+    font-weight:600;
+}
+
+.pa-bar{
+    height:18px;
+    border-radius:10px;
+    transition:.3s;
+    min-width:40px;
+}
+
+.pa-bar-blue{
+    background:linear-gradient(90deg,#4b6bfb,#3b82f6);
+}
+
+.pa-bar-orange{
+    background:linear-gradient(90deg,#fb7f54,#ffae70);
+}
+
+.pa-bar-value{
+    font-size:14px;
+    color:#1f2937;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+.pa-bar-item span:not(.pa-month-label){
+    flex-shrink:0;
+}
+
+.pa-bar-jan{width:78%;}
+.pa-bar-feb{width:48%;}
+.pa-bar-mar{width:100%;}
+.pa-bar-apr{width:72%;}
+.pa-bar-may{width:33%;}
+.pa-bar-jun{width:78%;}
+.pa-bar-jul{width:16%;}
+
+/* ==========================================
+   DONUT CARD
+========================================== */
+
+.pa-donut-wrapper{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:24px;
+}
+
+.pa-donut-chart{
+    width:260px;
+    height:260px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.pa-donut-ring{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:conic-gradient(
+        #4b6bfb 0% 56%,
+        #fbbf24 56% 66%,
+        #fb7f54 66% 100%
+    );
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.pa-donut-ring::after{
+    content:"";
+    position:absolute;
+    inset:26px;
+    background:#f5f7fb;
+    border-radius:50%;
+}
+
+.pa-donut-center{
+    position:relative;
+    width:92px;
+    height:92px;
+    background:#eef3ff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 16px 40px rgba(75,107,251,.12);
+    z-index:1;
+}
+
+.pa-donut-center svg{
+    width:26px;
+    height:26px;
+    color:#4b6bfb;
+}
+
+.pa-donut-legend{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:24px;
+    flex-wrap:wrap;
+}
+
+.pa-legend-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.pa-dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    flex-shrink:0;
+}
+
+.pa-yellow{
+    background:#fbbf24;
+}
+
+.pa-orange{
+    background:#fb7f54;
+}
+
+.pa-legend-item p{
+    font-size:15px;
+    font-weight:600;
+    color:#374151;
+}
+/* ==========================================
+   TABLE ALIGNMENT
+========================================== */
+
+.pa-table th:first-child,
+.pa-table td:first-child{
+    width:70px;
+}
+
+.pa-table th:nth-child(2),
+.pa-table td:nth-child(2){
+    width:38%;
+}
+
+.pa-table th:nth-child(3),
+.pa-table td:nth-child(3){
+    text-align:center;
+}
+
+.pa-table th:nth-child(4),
+.pa-table td:nth-child(4){
+    text-align:center;
+}
+
+.pa-table th:last-child,
+.pa-table td:last-child{
+    text-align:right;
+}
+
+/* ==========================================
+   HOVER EFFECTS
+========================================== */
+
+.pa-stat-card,
+.pa-products-card,
+.pa-month-card,
+.pa-sales-card{
+    transition:all .3s ease;
+}
+
+.pa-stat-card:hover,
+.pa-products-card:hover,
+.pa-month-card:hover,
+.pa-sales-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+}
+
+.pa-add-btn:hover{
+    background:#3d5be6;
+}
+
+.pa-date:hover{
+    box-shadow:0 12px 30px rgba(75,107,251,.15);
+}
+
+.pa-product-image{
+    transition:transform .3s ease;
+}
+
+.pa-table tbody tr:hover .pa-product-image{
+    transform:scale(1.08);
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+.pa-main::-webkit-scrollbar{
+    width:8px;
+}
+
+.pa-main::-webkit-scrollbar-thumb{
+    background:#d7dbe8;
+    border-radius:20px;
+}
+
+.pa-main::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+.pa-graph{
+    margin-top:24px;
+    width:100%;
+    min-height:120px;
+    position:relative;
+}
+
+.pa-graph-svg{
+    width:100%;
+    height:120px;
+    display:block;
+}
+
+.pa-graph-product .pa-graph-svg{
+    background: linear-gradient(180deg, rgba(75,107,251,.05) 0%, rgba(255,255,255,0) 100%);
+    border-radius:18px;
+}
+
+.pa-graph-sales .pa-graph-svg{
+    background: linear-gradient(180deg, rgba(245,158,11,.05) 0%, rgba(255,255,255,0) 100%);
+    border-radius:18px;
+}
+
+@media(max-width:1400px){
+
+    .pa-content{
+        grid-template-columns:1fr;
+    }
+
+    .pa-right{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:24px;
+    }
+
+}
+
+@media(max-width:992px){
+
+    .pa-main{
+        padding:20px;
+    }
+
+    .pa-header{
+        flex-direction:column;
+        gap:24px;
+        align-items:flex-start;
+    }
+
+    .pa-header-actions{
+        flex-wrap:wrap;
+    }
+
+    .pa-statistics{
+        grid-template-columns:1fr;
+    }
+
+    .pa-right{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .pa-products-card{
+        overflow-x:auto;
+    }
+
+    .pa-table{
+        min-width:760px;
+    }
+
+    .pa-bar-chart{
+        gap:6px;
+    }
+
+    .pa-bar{
+        width:16px;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .pa-main{
+        padding:16px;
+    }
+
+    .pa-header h1{
+        font-size:26px;
+    }
+
+    .pa-tabs{
+        width:100%;
+    }
+
+    .pa-tabs button{
+        flex:1;
+    }
+
+    .pa-header-actions{
+        width:100%;
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .pa-date,
+    .pa-add-btn{
+        width:100%;
+        justify-content:center;
+    }
+
+    .pa-products-header{
+        flex-direction:column;
+        gap:16px;
+        align-items:flex-start;
+    }
+
+    .pa-month-header,
+    .pa-sales-header{
+        flex-direction:row;
+    }
+
+    .pa-donut-image{
+        width:180px;
+    }
+
+}

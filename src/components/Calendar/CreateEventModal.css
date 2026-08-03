@@ -1,0 +1,452 @@
+/* ==========================================
+   OVERLAY
+========================================== */
+
+.create-event-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 9999;
+    animation: fadeIn .25s ease;
+}
+
+/* ==========================================
+   MODAL
+========================================== */
+
+.create-event-modal {
+    width: 100%;
+    max-width: 620px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, .18);
+    animation: popup .25s ease;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.create-event-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.create-event-header h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #202224;
+}
+
+.create-event-close {
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: #f5f7fb;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .25s;
+}
+
+.create-event-close svg {
+    font-size: 18px;
+}
+
+.create-event-close:hover {
+    background: #ececec;
+}
+
+/* ==========================================
+   TABS
+========================================== */
+
+.create-event-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.create-event-tabs button {
+    border: none;
+    background: #f5f7fb;
+    color: #6b7280;
+    padding: 11px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.create-event-tabs button:hover {
+    background: #ececec;
+}
+
+.create-event-tabs .active {
+    background: #4f46e5;
+    color: #ffffff;
+}
+
+/* ==========================================
+   TITLE INPUT
+========================================== */
+
+.create-event-title {
+    width: 100%;
+    height: 52px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 0 16px;
+    font-size: 15px;
+    margin-bottom: 24px;
+    outline: none;
+    transition: .25s;
+}
+
+.create-event-title:focus {
+    border-color: #4f46e5;
+}
+
+.create-event-title::placeholder {
+    color: #9ca3af;
+}
+/* ==========================================
+   TIME SECTION
+========================================== */
+
+.create-event-time {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.create-event-icon {
+    width: 44px;
+    height: 44px;
+    background: #f5f7fb;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.create-event-icon svg {
+    font-size: 18px;
+    color: #4f46e5;
+}
+
+.create-event-time-content {
+    flex: 1;
+}
+
+.create-event-time-content h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #202224;
+}
+
+.create-event-time-content p {
+    margin: 8px 0 12px;
+    font-size: 14px;
+    color: #8b8b8b;
+}
+
+.create-event-time-content button {
+    border: none;
+    background: transparent;
+    color: #4f46e5;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+}
+
+.create-event-time-content button:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   PEOPLE & LOCATION BUTTONS
+========================================== */
+
+.create-event-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 26px;
+}
+
+.people-btn,
+.location-btn {
+    flex: 1;
+    height: 48px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: #202224;
+    transition: all .25s ease;
+}
+
+.people-btn svg,
+.location-btn svg {
+    color: #4f46e5;
+    font-size: 17px;
+}
+
+.people-btn:hover,
+.location-btn:hover {
+    border-color: #4f46e5;
+    background: #eef2ff;
+}
+
+/* ==========================================
+   DIVIDER
+========================================== */
+
+.create-event-divider {
+    width: 100%;
+    height: 1px;
+    background: #ececec;
+    margin: 22px 0;
+}
+
+/* ==========================================
+   ORGANIZER
+========================================== */
+
+.create-event-organizer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.create-event-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #4f46e5;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.create-event-organizer-info {
+    flex: 1;
+}
+
+.create-event-organizer-info h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #202224;
+}
+
+.create-event-organizer-info p {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #8b8b8b;
+}
+/* ==========================================
+   CALENDAR ROW
+========================================== */
+
+.create-event-calendar-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.create-event-calendar-content {
+    flex: 1;
+}
+
+.create-event-calendar-content h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #202224;
+}
+
+.create-event-calendar-content p {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #8b8b8b;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.create-event-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.create-event-cancel {
+    min-width: 120px;
+    height: 46px;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    color: #374151;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.create-event-cancel:hover {
+    background: #f5f5f5;
+}
+
+.create-event-save {
+    min-width: 120px;
+    height: 46px;
+    border: none;
+    background: #4f46e5;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.create-event-save:hover {
+    background: #4338ca;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes popup {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:768px){
+
+    .create-event-modal{
+        max-width:100%;
+        padding:22px;
+        border-radius:16px;
+    }
+
+    .create-event-header h2{
+        font-size:24px;
+    }
+
+    .create-event-buttons{
+        flex-direction:column;
+    }
+
+    .people-btn,
+    .location-btn{
+        width:100%;
+    }
+
+    .create-event-footer{
+        flex-direction:column-reverse;
+    }
+
+    .create-event-cancel,
+    .create-event-save{
+        width:100%;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .create-event-overlay{
+        padding:14px;
+    }
+
+    .create-event-modal{
+        padding:18px;
+    }
+
+    .create-event-header{
+        margin-bottom:18px;
+    }
+
+    .create-event-header h2{
+        font-size:20px;
+    }
+
+    .create-event-tabs{
+        flex-wrap:wrap;
+    }
+
+    .create-event-tabs button{
+        flex:1;
+        min-width:90px;
+    }
+
+    .create-event-time{
+        gap:12px;
+    }
+
+    .create-event-organizer{
+        gap:12px;
+    }
+
+    .create-event-avatar{
+        width:44px;
+        height:44px;
+        font-size:15px;
+    }
+
+}

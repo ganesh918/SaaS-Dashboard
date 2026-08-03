@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* ===================================================
+                    PAGE
+=================================================== */
+
+.login-page{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    background:#FFFFFF;
+
+    overflow:hidden;
+
+    font-family:"Poppins",sans-serif;
+
+}
+
+/* ===================================================
+                    LEFT
+=================================================== */
+
+.login-left{
+
+    width:440px;
+
+    min-width:440px;
+
+    border-right:1px solid #F2F2F2;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#FFFFFF;
+
+}
+
+.login-container{
+
+    width:342px;
+
+}
+
+/* ===================================================
+                    LOGO
+=================================================== */
+
+.login-logo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    margin-bottom:48px;
+
+}
+
+.login-logo img{
+
+    width:92px;
+
+    margin-bottom:24px;
+
+}
+
+.login-logo h1{
+
+    font-size:24px;
+
+    font-weight:600;
+
+    color:#1F1F39;
+
+}
+
+/* ===================================================
+                    SOCIAL
+=================================================== */
+
+.login-social{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-bottom:34px;
+
+}
+
+/* ===================================================
+                    DIVIDER
+=================================================== */
+
+.login-divider{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-bottom:34px;
+
+}
+
+.login-divider span{
+
+    flex:1;
+
+    height:1px;
+
+    background:#E8E8E8;
+
+}
+
+.login-divider p{
+
+    font-size:16px;
+
+    font-weight:500;
+
+}
+
+/* ===================================================
+                    FORM
+=================================================== */
+
+.login-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* ===================================================
+                    OPTIONS
+=================================================== */
+
+.login-options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:8px 0 28px;
+
+}
+
+.remember{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+}
+
+.remember span{
+
+    font-size:14px;
+
+    color:#434343;
+
+}
+
+.remember input{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+.forgot-password{
+
+    text-decoration:none;
+
+    color:#5B57F6;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+
+/* ===================================================
+                    FOOTER
+=================================================== */
+
+.login-footer{
+
+    margin-top:30px;
+
+    text-align:center;
+
+}
+
+.login-footer p{
+
+    color:#555;
+
+    font-size:15px;
+
+}
+
+.login-footer a{
+
+    margin-left:6px;
+
+    color:#5B57F6;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+/* ===================================================
+                    RIGHT
+=================================================== */
+
+.login-right{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#FFFFFF;
+
+}
+
+.login-illustration{
+
+    width:720px;
+
+    max-width:80%;
+
+    object-fit:contain;
+
+}
+
+/* ===================================================
+                    RESPONSIVE
+=================================================== */
+
+@media(max-width:1200px){
+
+    .login-right{
+
+        display:none;
+
+    }
+
+    .login-left{
+
+        width:100%;
+
+        min-width:100%;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .login-container{
+
+        width:90%;
+
+    }
+
+    .login-social{
+
+        flex-direction:column;
+
+    }
+
+}

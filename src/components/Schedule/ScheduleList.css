@@ -1,0 +1,605 @@
+/* ==========================================
+   SCHEDULE LIST PAGE
+========================================== */
+
+.schedule-list-page{
+    display:flex;
+    min-height:100vh;
+    background:#F6F8FC;
+    font-family:"Inter",sans-serif;
+}
+
+.schedule-list-main{
+    flex:1;
+    padding:30px;
+    overflow:auto;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.schedule-list-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.schedule-list-header h1{
+    font-size:30px;
+    font-weight:700;
+    color:#1F2937;
+}
+
+.add-new-btn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:#6C63FF;
+    color:#fff;
+    border:none;
+    border-radius:12px;
+    padding:12px 22px;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.add-new-btn:hover{
+    background:#574BFF;
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.schedule-content{
+    display:flex;
+    gap:30px;
+    align-items:flex-start;
+}
+
+/* ==========================================
+   LEFT PANEL
+========================================== */
+
+.schedule-left-panel{
+    width:340px;
+    min-width:340px;
+}
+
+.create-schedule-btn{
+    width:100%;
+    height:52px;
+    border:none;
+    border-radius:14px;
+    background:#6C63FF;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    margin-bottom:24px;
+    transition:.3s;
+}
+
+.create-schedule-btn:hover{
+    background:#574BFF;
+}
+/* ==========================================
+   CALENDAR CARD
+========================================== */
+
+.calendar-card{
+    background:#ffffff;
+    border-radius:18px;
+    padding:20px;
+    margin-bottom:24px;
+    box-shadow:0 4px 12px rgba(0,0,0,.06);
+}
+
+.calendar-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.calendar-header span{
+    font-size:16px;
+    font-weight:600;
+    color:#1F2937;
+}
+
+.calendar-arrows{
+    display:flex;
+    gap:12px;
+}
+
+.calendar-arrows span{
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    background:#F3F4F6;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.calendar-arrows span:hover{
+    background:#6C63FF;
+    color:#ffffff;
+}
+
+.calendar-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.calendar-table th{
+    padding:10px 0;
+    font-size:13px;
+    color:#9CA3AF;
+    font-weight:600;
+}
+
+.calendar-table td{
+    width:38px;
+    height:38px;
+    text-align:center;
+    font-size:14px;
+    color:#4B5563;
+    border-radius:50%;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.calendar-table td:hover{
+    background:#EEF2FF;
+}
+
+.active-day{
+    background:#6C63FF;
+    color:#ffffff !important;
+}
+
+/* ==========================================
+   PEOPLE SECTION
+========================================== */
+
+.people-section{
+    background:#ffffff;
+    border-radius:18px;
+    padding:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,.06);
+    margin-bottom:24px;
+}
+
+.people-section h3{
+    font-size:18px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:18px;
+}
+
+.people-search{
+    position:relative;
+    margin-bottom:20px;
+}
+
+.people-search svg{
+    position:absolute;
+    left:14px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#9CA3AF;
+    font-size:16px;
+}
+
+.people-search input{
+    width:100%;
+    height:46px;
+    border:1px solid #E5E7EB;
+    border-radius:12px;
+    padding-left:42px;
+    padding-right:14px;
+    font-size:14px;
+    outline:none;
+    transition:.3s;
+}
+
+.people-search input:focus{
+    border-color:#6C63FF;
+}
+
+/* ==========================================
+   PEOPLE LIST
+========================================== */
+
+.people-list{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.people-card{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:12px;
+    border-radius:12px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.people-card:hover{
+    background:#F9FAFB;
+}
+
+.people-card img{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.people-card h4{
+    font-size:15px;
+    font-weight:600;
+    color:#111827;
+    margin-bottom:4px;
+}
+
+.people-card p{
+    font-size:13px;
+    color:#6B7280;
+}
+
+/* ==========================================
+   MY SCHEDULE BUTTON
+========================================== */
+
+.my-schedule-btn{
+    width:100%;
+    height:52px;
+    border:none;
+    border-radius:14px;
+    background:#111827;
+    color:#ffffff;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.my-schedule-btn:hover{
+    background:#374151;
+}
+/* ==========================================
+   SCHEDULE TABLE
+========================================== */
+
+.schedule-table-section{
+    flex:1;
+    background:#ffffff;
+    border-radius:20px;
+    padding:24px;
+    box-shadow:0 4px 12px rgba(0,0,0,.06);
+}
+
+.schedule-table-header{
+    display:grid;
+    grid-template-columns:60px 2fr 1.3fr 2fr 120px;
+    align-items:center;
+    padding:0 0 18px;
+    border-bottom:1px solid #ECEEF4;
+    margin-bottom:10px;
+}
+
+.schedule-table-header div{
+    font-size:14px;
+    font-weight:700;
+    color:#6B7280;
+}
+
+.schedule-table-body{
+    display:flex;
+    flex-direction:column;
+}
+
+.schedule-row{
+    display:grid;
+    grid-template-columns:60px 2fr 1.3fr 2fr 120px;
+    align-items:center;
+    padding:18px 0;
+    border-bottom:1px solid #F3F4F6;
+    transition:.3s;
+}
+
+.schedule-row:last-child{
+    border-bottom:none;
+}
+
+.schedule-row:hover{
+    background:#FAFBFD;
+}
+
+/* ==========================================
+   CHECKBOX
+========================================== */
+
+.table-checkbox{
+    display:flex;
+    justify-content:center;
+}
+
+.table-checkbox input{
+    width:18px;
+    height:18px;
+    cursor:pointer;
+}
+
+/* ==========================================
+   DATE
+========================================== */
+
+.table-date{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#374151;
+    font-size:14px;
+    font-weight:500;
+}
+
+.table-date svg{
+    color:#6C63FF;
+    font-size:16px;
+}
+
+/* ==========================================
+   TIME
+========================================== */
+
+.table-time{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#374151;
+    font-size:14px;
+    font-weight:500;
+}
+
+.table-time svg{
+    color:#6C63FF;
+    font-size:15px;
+}
+
+/* ==========================================
+   LOCATION
+========================================== */
+
+.location-pill{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#EEF2FF;
+    color:#4338CA;
+    padding:10px 18px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.location-pill svg{
+    font-size:13px;
+}
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+.table-actions{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+
+.edit-btn,
+.delete-btn{
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:.3s;
+    font-size:16px;
+}
+
+.edit-btn{
+    background:#EEF2FF;
+    color:#4338CA;
+}
+
+.edit-btn:hover{
+    background:#6C63FF;
+    color:#ffffff;
+}
+
+.delete-btn{
+    background:#FEF2F2;
+    color:#DC2626;
+}
+
+.delete-btn:hover{
+    background:#DC2626;
+    color:#ffffff;
+}
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width:1400px){
+
+    .schedule-content{
+        flex-direction:column;
+    }
+
+    .schedule-left-panel{
+        width:100%;
+        min-width:100%;
+    }
+
+    .schedule-table-section{
+        width:100%;
+    }
+
+}
+
+@media (max-width:1200px){
+
+    .schedule-list-main{
+        padding:24px;
+    }
+
+    .schedule-list-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    .schedule-table-section{
+        overflow-x:auto;
+    }
+
+    .schedule-table-header,
+    .schedule-row{
+        min-width:850px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .schedule-list-main{
+        padding:18px;
+    }
+
+    .schedule-list-header h1{
+        font-size:24px;
+    }
+
+    .calendar-card,
+    .people-section,
+    .schedule-table-section{
+        padding:18px;
+    }
+
+    .people-card img{
+        width:42px;
+        height:42px;
+    }
+
+    .create-schedule-btn,
+    .my-schedule-btn,
+    .add-new-btn{
+        height:48px;
+        font-size:14px;
+    }
+
+}
+
+@media (max-width:576px){
+
+    .schedule-list-main{
+        padding:15px;
+    }
+
+    .schedule-list-header h1{
+        font-size:22px;
+    }
+
+    .calendar-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .calendar-table th,
+    .calendar-table td{
+        font-size:12px;
+    }
+
+    .people-card{
+        gap:10px;
+    }
+
+    .people-card h4{
+        font-size:14px;
+    }
+
+    .people-card p{
+        font-size:12px;
+    }
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+.schedule-list-main::-webkit-scrollbar{
+    width:8px;
+    height:8px;
+}
+
+.schedule-list-main::-webkit-scrollbar-track{
+    background:#F1F5F9;
+}
+
+.schedule-list-main::-webkit-scrollbar-thumb{
+    background:#CBD5E1;
+    border-radius:20px;
+}
+
+.schedule-list-main::-webkit-scrollbar-thumb:hover{
+    background:#94A3B8;
+}
+
+.schedule-table-section::-webkit-scrollbar{
+    height:8px;
+}
+
+.schedule-table-section::-webkit-scrollbar-thumb{
+    background:#CBD5E1;
+    border-radius:20px;
+}
+
+.schedule-table-section::-webkit-scrollbar-track{
+    background:#F8FAFC;
+}
+
+/* ==========================================
+   SMOOTH TRANSITIONS
+========================================== */
+
+.add-new-btn,
+.create-schedule-btn,
+.my-schedule-btn,
+.people-card,
+.schedule-row,
+.edit-btn,
+.delete-btn,
+.calendar-arrows span{
+    transition:all .3s ease;
+}
