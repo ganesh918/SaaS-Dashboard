@@ -8,16 +8,10 @@
     padding: 16px !important;
   }
 
-  /* Stack top cards into 2 columns or 1 on very small screens */
+  /* Stack top cards into 2 columns on small screens */
   .cards-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 12px !important;
-  }
-
-  @media (max-width:420px) {
-    .cards-grid {
-      grid-template-columns: 1fr !important;
-    }
   }
 
   .stat-card {
@@ -83,4 +77,141 @@
 
   /* Keep images responsive */
   img { height: auto; max-width: 100%; }
+
+  /* Make page containers stack and shrink to mobile widths */
+  .dashboard-page,
+  .analytics-page,
+  .invoice-page,
+  .pa-page,
+  .messages-page,
+  .schedule-page,
+  .schedule-list-page,
+  .settings-page,
+  .task-preview-page {
+    flex-direction: column !important;
+    min-height: auto !important;
+  }
+
+  .dashboard-header,
+  .analytics-header,
+  .invoice-header,
+  .pa-header,
+  .messages-header,
+  .schedule-header,
+  .schedule-list-header,
+  .settings-header,
+  .task-preview-top {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+  }
+
+  .date-select,
+  .invoice-header-right,
+  .messages-header,
+  .schedule-tabs,
+  .settings-actions,
+  .task-tabs,
+  .pa-header-actions {
+    width: 100% !important;
+    flex-wrap: wrap !important;
+  }
+
+  .date-select select,
+  .invoice-search,
+  .messages-search,
+  .search-box input,
+  .task-search-box,
+  .pa-date,
+  .pa-add-btn,
+  .schedule-search input,
+  .people-search input,
+  .messages-search input {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .invoice-table-header,
+  .invoice-row {
+    grid-template-columns: 1fr !important;
+    padding: 14px !important;
+  }
+
+  .invoice-table-header > div,
+  .invoice-row > div {
+    width: 100% !important;
+  }
+
+  .invoice-search,
+  .invoice-header-right,
+  .task-search-box,
+  .messages-search,
+  .schedule-left-panel,
+  .status-panel,
+  .timeline-wrapper,
+  .people-section,
+  .calendar-card {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .messages-main,
+  .schedule-content,
+  .settings-body,
+  .pa-statistics,
+  .pa-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  .task-tabs {
+    width: 100% !important;
+  }
+
+  .task-tabs button {
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+  }
+
+  .add-task-btn,
+  .add-new-btn,
+  .schedule-tabs button,
+  .settings-tabs button,
+  .pa-tabs button {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .schedule-board {
+    display: block !important;
+    overflow-x: auto !important;
+  }
+
+  .schedule-column {
+    width: auto !important;
+    min-width: auto !important;
+    margin-bottom: 18px !important;
+  }
+
+  .timeline-header,
+  .timeline-row {
+    display: block !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .timeline-date-row {
+    display: grid !important;
+    grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    overflow-x: auto !important;
+  }
+
+  .sidebar {
+    width: 260px !important;
+  }
+
+  .sidebar.open {
+    transform: translateX(0) !important;
+  }
 }
