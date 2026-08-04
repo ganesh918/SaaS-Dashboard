@@ -45,6 +45,7 @@ const Schedule = () => {
         title:"Landing Page Design",
         priority:"Medium",
         status:"At Risk",
+        statusClass: "at-risk-dark",
         description:"Discussion for management dashboard ui design",
         members:[avatar1,avatar2,avatar3,avatar4],
         comments:112,
@@ -141,7 +142,7 @@ const reviewTasks = [
         id:9,
         title:"E-Shop Mobile App",
         priority:"Low",
-        status:"At Risk",
+        status:"",
         description:"Discussion for management dashboard ui design",
         members:[avatar1,avatar2,avatar3,avatar4],
         comments:112,
@@ -224,9 +225,7 @@ const renderCard = (task) => (
                 }
 
                 <h4>
-
                     {task.title}
-
                 </h4>
 
             </div>
@@ -243,7 +242,7 @@ const renderCard = (task) => (
 
                 task.status &&
 
-                <span className="status-badge">
+                <span className={`status-badge ${task.status === "At Risk" ? "at-risk" : ""} ${task.statusClass ? task.statusClass : ""}`}>
 
                     {task.status}
 

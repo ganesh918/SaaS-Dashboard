@@ -4,7 +4,7 @@ import Sidebar from "../common/Sidebar";
 
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
-import { FiPhone, FiMapPin } from "react-icons/fi";
+import { FiPhone, FiMapPin, FiUsers, FiTrendingUp, FiDollarSign } from "react-icons/fi";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import { HiOutlineCamera } from "react-icons/hi";

@@ -1,9 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
+import { useState } from "react";
+import { useEffect } from "react";
 
 import "./Sidebar.css";
 
 import { NavLink } from "react-router-dom";
+import { FiMenu, FiX } from "react-icons/fi";
 
 import baseLogo from "../../assets/dashboardassets/base logo.png";
 import dashboardIcon from "../../assets/dashboardassets/dashboard.png";
@@ -19,6 +22,19 @@ import upgrade from "../../assets/dashboardassets/upgrade.png";
 
 const Sidebar = () => {
 
+const [isOpen, setIsOpen] = useState(false);
+
+const closeMobile = () => setIsOpen(false);
+const openMobile = () => setIsOpen(true);
+
+useEffect(() => {
+  if (isOpen) {
+    document.body.classList.add("no-scroll");
+  } else {
+    document.body.classList.remove("no-scroll");
+  }
+}, [isOpen]);
+
 const navigate = useNavigate();
 
 const { logout } = useAuth();
@@ -31,8 +47,19 @@ const handleLogout = () => {
 
 };
   return (
+    <>
+      <button
+        className="sidebar-toggle"
+        aria-label="Open menu"
+        onClick={openMobile}
+      >
+        <FiMenu />
+      </button>
 
-    <aside className="sidebar">
+      <aside className={`sidebar ${isOpen ? "open" : ""}`}>
+        <button className="sidebar-close" aria-label="Close menu" onClick={closeMobile}>
+          <FiX />
+        </button>
 
       <div>
 
@@ -67,6 +94,7 @@ const handleLogout = () => {
 
             <NavLink
               to="/"
+              onClick={closeMobile}
               className={({ isActive }) =>
                 isActive
                   ? "sidebar-link active"
@@ -99,6 +127,7 @@ const handleLogout = () => {
 
             <NavLink
               to="/analytics"
+              onClick={closeMobile}
               className={({ isActive }) =>
                 isActive
                   ? "sidebar-link active"
@@ -131,6 +160,7 @@ const handleLogout = () => {
 
             <NavLink
               to="/invoice"
+              onClick={closeMobile}
               className={({ isActive }) =>
                 isActive
                   ? "sidebar-link active"
@@ -163,6 +193,7 @@ const handleLogout = () => {
 
             <NavLink
               to="/schedule"
+              onClick={closeMobile}
               className={({ isActive }) =>
                 isActive
                   ? "sidebar-link active"
@@ -195,6 +226,7 @@ const handleLogout = () => {
 
             <NavLink
               to="/calendar"
+              onClick={closeMobile}
               className={({ isActive }) =>
                 isActive
                   ? "sidebar-link active"
@@ -227,6 +259,7 @@ const handleLogout = () => {
 
             <NavLink
               to="/messages"
+              onClick={closeMobile}
               className={({ isActive }) =>
                 isActive
                   ? "sidebar-link active"
@@ -265,6 +298,7 @@ const handleLogout = () => {
 
             <NavLink
               to="/notification"
+              onClick={closeMobile}
               className="sidebar-link"
             >
 
@@ -293,6 +327,7 @@ const handleLogout = () => {
 
   <NavLink
     to="/settings"
+    onClick={closeMobile}
     className={({ isActive }) =>
       isActive ? "sidebar-link active" : "sidebar-link"
     }
@@ -382,7 +417,9 @@ const handleLogout = () => {
       </div>
 
     </aside>
+    <div className={`sidebar-backdrop ${isOpen ? 'show' : ''}`} onClick={closeMobile}></div>
 
+    </>
   );
 
 };

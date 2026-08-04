@@ -307,16 +307,11 @@
 .schedule-card{
 
     background:#FFFFFF;
-
-    border-radius:24px;
-
-    padding:24px;
-
-    margin-bottom:22px;
-
-    box-shadow:0 10px 28px rgba(17,24,39,.06);
-
-    transition:.3s;
+    border-radius:14px;
+    padding:20px;
+    margin-bottom:18px;
+    box-shadow:0 8px 20px rgba(17,24,39,.06);
+    transition:.28s;
 
 }
 
@@ -340,7 +335,7 @@
 
     align-items:flex-start;
 
-    margin-bottom:18px;
+    margin-bottom:12px;
 
 }
 
@@ -362,7 +357,7 @@
 
     color:#22274B;
 
-    line-height:24px;
+    line-height:22px;
 
 }
 
@@ -423,31 +418,20 @@
 .schedule-card-badges{
 
     display:flex;
-
     gap:10px;
-
-    margin-bottom:16px;
+    margin-bottom:12px;
 
 }
 
 .badge{
-
-    height:32px;
-
-    padding:0 18px;
-
+    height:30px;
+    padding:0 16px;
     border-radius:999px;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     font-size:13px;
-
     font-weight:600;
-
 }
 
 .low{
@@ -475,27 +459,26 @@
 }
 
 .status-badge{
-
-    height:32px;
-
-    padding:0 18px;
-
+    height:30px;
+    padding:0 14px;
     border-radius:999px;
-
     background:#FFD96A;
-
     color:#313658;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     font-size:13px;
-
     font-weight:600;
+}
 
+.status-badge.at-risk{
+    background:#FF6C78;
+    color:#FFFFFF;
+}
+
+.status-badge.at-risk-dark{
+    background:#8B0000; /* dark red */
+    color:#FFFFFF;
 }
 
 /* ==========================================================
@@ -524,17 +507,17 @@
     display:flex;
     align-items:flex-start;
     gap:18px;
-    margin-bottom:22px;
+    margin-bottom:16px;
 }
 
 .card-image{
-    width:118px;
+    width:110px;
     flex-shrink:0;
 }
 
 .card-image img{
     width:100%;
-    height:104px;
+    height:96px;
     object-fit:cover;
     border-radius:16px;
     display:block;
@@ -544,6 +527,7 @@
     flex:1;
     margin-bottom:0;
     color:#7A7F98;
+    font-size:14px;
 }
 
 /* ==========================================================
@@ -574,21 +558,14 @@
 
 .member-group img{
 
-    width:34px;
-
-    height:34px;
-
+    width:38px;
+    height:38px;
     border-radius:50%;
-
     object-fit:cover;
-
     border:2px solid #FFFFFF;
-
-    margin-left:-8px;
-
+    margin-left:-10px;
     background:#FFFFFF;
-
-    transition:.25s;
+    transition:.2s;
 
 }
 
@@ -608,28 +585,17 @@
 
 .member-count{
 
-    width:34px;
-
-    height:34px;
-
-    margin-left:-8px;
-
+    width:36px;
+    height:36px;
+    margin-left:-10px;
     border-radius:50%;
-
     background:#28C7F5;
-
     color:#FFFFFF;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     font-size:18px;
-
     font-weight:600;
-
     border:2px solid #FFFFFF;
 
 }

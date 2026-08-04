@@ -130,72 +130,30 @@ const Calendar = () => {
   const month = currentDate.getMonth();
     const miniCalendar = useMemo(() => {
 
-    const firstDay = new Date(
-      year,
-      month,
-      1
-    ).getDay();
-
-    const daysInMonth = new Date(
-      year,
-      month + 1,
-      0
-    ).getDate();
-
-    const previousMonthDays = new Date(
-      year,
-      month,
-      0
-    ).getDate();
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const previousMonthDays = new Date(year, month, 0).getDate();
 
     const calendar = [];
 
-    for (
-      let i = firstDay - 1;
-      i >= 0;
-      i--
-    ) {
-
+    // leading days from previous month
+    for (let i = 0; i < firstDay; i++) {
       calendar.push({
-
-        day: previousMonthDays - i,
-
+        day: previousMonthDays - (firstDay - 1 - i),
         current: false,
-
       });
-
     }
 
-    for (
-      let i = 1;
-      i <= daysInMonth;
-      i++
-    ) {
-
-      calendar.push({
-
-        day: i,
-
-        current: true,
-
-      });
-
+    // current month days
+    for (let i = 1; i <= daysInMonth; i++) {
+      calendar.push({ day: i, current: true });
     }
 
-    while (calendar.length < 35) {
-
-      calendar.push({
-
-        day:
-          calendar.length -
-          daysInMonth -
-          firstDay +
-          1,
-
-        current: false,
-
-      });
-
+    // trailing days to fill 6 rows (42 cells)
+    const totalCells = 42;
+    const trailingCount = totalCells - calendar.length;
+    for (let i = 1; i <= trailingCount; i++) {
+      calendar.push({ day: i, current: false });
     }
 
     return calendar;
@@ -336,6 +294,18 @@ const Calendar = () => {
 
                     year === selectedDate.getFullYear();
 
+                  const today = new Date();
+
+                  const isToday =
+
+                    item.current &&
+
+                    item.day === today.getDate() &&
+
+                    month === today.getMonth() &&
+
+                    year === today.getFullYear();
+
                   return (
 
                     <button
@@ -346,6 +316,7 @@ const Calendar = () => {
                         calendar-mini-day
                         ${!item.current ? "calendar-mini-disabled" : ""}
                         ${active ? "calendar-mini-selected" : ""}
+                        ${isToday ? "calendar-mini-today" : ""}
                       `}
 
                       onClick={() => {

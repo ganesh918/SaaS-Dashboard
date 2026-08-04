@@ -157,15 +157,10 @@
 ====================================================== */
 
 .upgrade-card{
-
-    margin-top:38px;
-
+    margin-top:48px;
     background:#F4F7FF;
-
     border-radius:24px;
-
-    padding:20px 18px;
-
+    padding:34px 18px 20px; /* extra top padding to move contents down */
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -175,7 +170,14 @@
 
     width:150px;
 
-    margin-bottom:18px;
+    margin-bottom:22px;
+}
+
+/* Recolor the upgrade image to blue tone (affects only this image)
+   Keeps size and placement unchanged. */
+.upgrade-image {
+    -webkit-filter: grayscale(1) sepia(1) saturate(6) hue-rotate(185deg) brightness(1.02) contrast(1.02);
+    filter: grayscale(1) sepia(1) saturate(6) hue-rotate(185deg) brightness(1.02) contrast(1.02);
 }
 
 .upgrade-btn{
@@ -264,5 +266,180 @@
 .logout-icon:hover{
 
     transform:scale(1.1);
+
+}
+
+/* ==========================
+   MOBILE: HAMBURGER + OVERLAY
+   Only active below 992px so desktop is unchanged
+   ==========================
+*/
+
+/* toggle button (hidden on desktop) */
+.sidebar-toggle{
+    display:none;
+}
+
+.sidebar-close{
+    display:none;
+}
+
+@media(max-width:992px){
+
+    .sidebar-toggle{
+        display:flex;
+        position:fixed;
+        top:14px;
+        left:14px;
+        width:44px;
+        height:44px;
+        border-radius:12px;
+        align-items:center;
+        justify-content:center;
+        background:#FFFFFF;
+        box-shadow:0 8px 24px rgba(15,23,42,.06);
+        z-index:2200;
+        border:none;
+        cursor:pointer;
+        color:#4B5563;
+    }
+
+    .sidebar-toggle .sidebar-toggle-label{
+        display:none;
+    }
+
+    /* show label and enlarge toggle on narrow screens */
+    @media(max-width:420px){
+        .sidebar-toggle{
+            width:auto;
+            padding:10px 12px;
+            gap:8px;
+        }
+        .sidebar-toggle .sidebar-toggle-label{
+            display:inline-block;
+            font-size:15px;
+            font-weight:600;
+            color:#1f2937;
+            margin-left:4px;
+        }
+    }
+
+    /* make sidebar hidden by default on mobile */
+    .sidebar{
+        position:fixed;
+        top:0;
+        left:0;
+        bottom:0;
+        width:260px;
+        transform:translateX(-110%);
+        transition:transform .28s ease;
+        z-index:2100;
+        background:#fff;
+        box-shadow:0 30px 60px rgba(15,23,42,.12);
+    }
+
+    .sidebar.open{
+        transform:translateX(0);
+    }
+
+    /* close button inside sidebar */
+    .sidebar-close{
+        display:flex;
+        position:absolute;
+        top:14px;
+        right:14px;
+        width:38px;
+        height:38px;
+        border-radius:10px;
+        align-items:center;
+        justify-content:center;
+        background:transparent;
+        border:none;
+        color:#6B7280;
+        cursor:pointer;
+        z-index:1400;
+    }
+
+    /* overlay when sidebar open */
+    .sidebar-backdrop{
+        display:none;
+    }
+
+}
+
+/* sidebar backdrop element (rendered by pages) */
+.sidebar-backdrop{
+    display:none;
+}
+
+@media(max-width:992px){
+
+    .sidebar-backdrop{
+        display:none;
+    }
+
+    .sidebar-backdrop.show{
+        display:block;
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,0.35);
+        z-index:2050;
+    }
+
+    /* make sidebar content scrollable and accessible on mobile */
+    .sidebar{
+        padding-top:72px; /* space for close button / top area */
+        overflow-y:auto;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .sidebar-menu{
+        max-height:calc(100vh - 260px);
+        overflow-y:auto;
+        padding-right:8px;
+        margin-top:18px;
+        display:block;
+    }
+
+    /* ensure links are visible on mobile */
+    .sidebar-link{
+        color:#202224;
+        background:transparent;
+        height:56px;
+        padding:0 18px;
+    }
+
+    .sidebar-left span{
+        color:#202224;
+        font-size:16px;
+        font-weight:600;
+    }
+
+    .sidebar-left img{width:24px;height:24px}
+
+    /* Force menu items visible and spaced for mobile */
+    .sidebar-menu li{
+        display:block;
+        margin:0 8px 8px 8px;
+    }
+
+    .sidebar-link{
+        display:flex;
+        align-items:center;
+        gap:12px;
+        padding:12px 14px;
+        border-radius:12px;
+        background:transparent;
+    }
+
+    .sidebar-link span{
+        color:#202224 !important;
+        font-weight:600;
+    }
+
+    /* temporary visual separators to confirm items show */
+    .sidebar-menu li + li{
+        border-top:1px solid rgba(15,23,42,0.03);
+    }
 
 }

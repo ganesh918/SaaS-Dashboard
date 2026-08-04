@@ -20,6 +20,7 @@ import {
 import {
   FiSearch,
 } from "react-icons/fi";
+import { FiMail, FiCalendar } from "react-icons/fi";
 
 import avatar1 from "../../assets/invoiceassets/avatar1.png";
 import avatar2 from "../../assets/invoiceassets/avatar2.png";
@@ -237,7 +238,7 @@ const Invoice = () => {
             </div>
 
             <div className="invoice-email">
-
+              <FiMail />
               Email
 
               <IoMdArrowDropdown />
@@ -245,7 +246,7 @@ const Invoice = () => {
             </div>
 
             <div className="invoice-date">
-
+              <FiCalendar />
               Date
 
               <IoMdArrowDropdown />
@@ -330,15 +331,13 @@ const Invoice = () => {
               </div>
 
               <div className="invoice-email">
-
-                {invoice.email}
-
+                <FiMail className="email-icon" />
+                <span className="email-text">{invoice.email}</span>
               </div>
 
               <div className="invoice-date">
-
-                {invoice.date}
-
+                <FiCalendar className="date-icon" />
+                <span className="date-text">{invoice.date}</span>
               </div>
 
               <div className="invoice-status">
