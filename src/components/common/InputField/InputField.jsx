@@ -8,6 +8,8 @@ const InputField = ({
   type,
   placeholder,
   password = false,
+  value = "",
+  onChange = () => {},
 }) => {
 
   const [showPassword, setShowPassword] = useState(false);
@@ -29,6 +31,8 @@ const InputField = ({
               : type
           }
           placeholder={placeholder}
+          value={value}
+          onChange={onChange}
         />
 
         {password && (

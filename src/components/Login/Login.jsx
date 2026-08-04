@@ -1,5 +1,6 @@
 import "./Login.css";
 
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { useAuth } from "../../context/AuthContext";
@@ -19,16 +20,23 @@ const Login = () => {
 
     const { login } = useAuth();
 
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [rememberMe, setRememberMe] = useState(false);
+    const [error, setError] = useState("");
+
     const handleLogin = (e) => {
 
         e.preventDefault();
 
-        // Authentication
+        if (!email.trim() || !password.trim() || !rememberMe) {
+            setError("Please enter email, password, and check Remember me to login.");
+            window.setTimeout(() => setError(""), 3000);
+            return;
+        }
+
         login();
-
-        // Navigate to Dashboard
         navigate("/");
-
     };
 
     return (
@@ -88,11 +96,18 @@ const Login = () => {
                         className="login-form"
                         onSubmit={handleLogin}
                     >
+                        {error && (
+                            <div className="login-toast">
+                                {error}
+                            </div>
+                        )}
 
                         <InputField
                             label="Email Address"
                             type="email"
                             placeholder="example@gmail.com"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
 
                         <InputField
@@ -100,6 +115,8 @@ const Login = () => {
                             type="password"
                             placeholder="••••••••"
                             password
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
                         />
 
                         {/* Remember Me */}
@@ -108,7 +125,11 @@ const Login = () => {
 
                             <label className="remember">
 
-                                <input type="checkbox" />
+                                <input
+                                  type="checkbox"
+                                  checked={rememberMe}
+                                  onChange={(e) => setRememberMe(e.target.checked)}
+                                />
 
                                 <span>Remember me</span>
 

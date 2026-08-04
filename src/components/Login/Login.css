@@ -142,6 +142,17 @@
 
 }
 
+.login-toast {
+    margin-bottom: 18px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: #FDEAEA;
+    color: #B72136;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(219, 62, 62, 0.12);
+}
+
 /* ===================================================
                     OPTIONS
 =================================================== */
