@@ -1,4 +1,4 @@
-import "./dashboard.css";
+import "./Dashboard.css";
 import Sidebar from "../common/Sidebar";
 import { useNavigate } from "react-router-dom";
 
