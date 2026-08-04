@@ -1,0 +1,86 @@
+/* Global mobile overrides (max-width:768px)
+   Non-destructive: only rules inside the media query
+*/
+
+@media (max-width: 768px) {
+  /* Reduce main padding for small screens */
+  .dashboard-main, .analytics-main, main {
+    padding: 16px !important;
+  }
+
+  /* Stack top cards into 2 columns or 1 on very small screens */
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  @media (max-width:420px) {
+    .cards-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  .stat-card {
+    padding: 16px !important;
+  }
+
+  .stat-card h2 { font-size: 26px !important; }
+  .stat-card p { font-size: 14px !important; }
+
+  /* Reports and analytics: stack vertically */
+  .graph-wrapper {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .report-card, .analytics-card {
+    height: auto !important;
+    padding: 16px !important;
+  }
+
+  /* Simplify chart area for small screens */
+  .report-chart-wrapper { flex-direction: column !important; }
+  .report-chart-yaxis { display: none !important; }
+  .report-chart-xaxis {
+    overflow-x: auto !important;
+    gap: 10px !important;
+    padding: 6px 0 !important;
+  }
+
+  /* Analytics page: convert two-column layout to single column */
+  .analytics-content { grid-template-columns: 1fr !important; }
+  .analytics-content.panel-open { grid-template-columns: 1fr !important; }
+
+  /* Customer table: hide header and stack rows */
+  .table-header { display: none !important; }
+  .customer-row {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    padding: 12px !important;
+    align-items: start !important;
+  }
+
+  .customer-name { gap: 12px !important; }
+  .customer-email, .customer-phone, .customer-gender { font-size: 14px !important; }
+
+  /* Invoice and other list cards: full width */
+  .invoice-row, .invoice-card, .task-card { width: 100% !important; }
+
+  /* Sidebar tweaks: ensure toggle visible and content not covered */
+  .sidebar-toggle { display: flex !important; }
+  .sidebar { transform: translateX(-110%) !important; }
+  .sidebar.open { transform: translateX(0) !important; }
+
+  /* Main content should allow sidebar overlay without shifting layout */
+  .dashboard-main, .analytics-main, main { padding-left: 16px !important; }
+
+  /* Make buttons and inputs finger-friendly */
+  button, select, input { min-height: 40px !important; }
+
+  /* Small utility: reduce modal/panel widths on mobile */
+  .add-customer-panel, .panel { width: 100% !important; max-width: 100% !important; }
+
+  /* Keep images responsive */
+  img { height: auto; max-width: 100%; }
+}
