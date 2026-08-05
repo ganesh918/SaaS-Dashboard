@@ -297,7 +297,7 @@ const handleLogout = () => {
           <li>
 
             <NavLink
-              to="/notification"
+              to="/notifications"
               onClick={closeMobile}
               className="sidebar-link"
             >

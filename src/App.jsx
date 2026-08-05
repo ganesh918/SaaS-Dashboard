@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Signup from "./components/Signup/Signup";
 import Login from "./components/Login/Login";
-import Dashboard from "./components/Dashboard/Dashboard";
+import Dashboard from "./components/Dashboard/dashboard";
 import Messages from "./components/Messages/Messages";
 import ProductAnalytics from "./components/ProductAnalytics/ProductAnalytics";
 import Analytics from "./components/Analytics/Analytics";
@@ -14,6 +14,7 @@ import ScheduleList from "./components/Schedule/ScheduleList";
 import TaskPreview from "./components/TaskPreview/TaskPreview";
 import Settings from "./components/Settings/Settings";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+import Notifications from "./components/Notifications/Notifications";
 
 function App() {
     return (
@@ -107,6 +108,11 @@ function App() {
             <CreateInvoice />
         </ProtectedRoute>
     }
+/>
+
+<Route
+    path="/notifications"
+    element={<Notifications />}
 />
 
 <Route

@@ -1,0 +1,35 @@
+.notifications-page{
+    display:flex;
+    width:100%;
+    min-height:100vh;
+    background:#F6F8FC;
+}
+
+.notifications-main{
+    flex:1;
+    padding:40px;
+}
+
+.notifications-heading{
+    font-size:36px;
+    font-weight:700;
+    color:#202442;
+    margin-bottom:40px;
+}
+
+.notifications-empty{
+    width:100%;
+    height:500px;
+    background:#FFFFFF;
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 8px 24px rgba(0,0,0,.05);
+}
+
+.notifications-empty p{
+    font-size:22px;
+    font-weight:600;
+    color:#9CA3AF;
+}
